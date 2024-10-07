@@ -1,17 +1,26 @@
-/* global.css */
-
 /* Global Styles */
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif; /* Utilisation de Roboto à la place de Verdana */
+    font-weight: 300; /* Définit le poids léger pour une apparence fine */
     margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: #111;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #000;
-    padding: 20px 0;
+    background-color: #ffffff;
+    height: 80px; /* Augmente la hauteur du header pour laisser de la place */
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -27,20 +36,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 300; /* Rend les liens de navigation plus fins */
     transition: color 0.3s ease;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #d4af37; /* Or doré */
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
+    color: #d4af37;
 }
 
 footer {

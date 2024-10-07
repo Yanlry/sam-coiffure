@@ -1,24 +1,32 @@
 /* Services Section */
 .services {
-    padding: 100px 50px;
+    padding: 50px 50px;
     text-align: center;
+    color: #ffffff;
+    background-color: #111;
 }
 
 .services h1 {
     font-size: 2.5rem;
-    color: #333;
-    text-transform: uppercase;
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: 2px;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 100px;
 }
 
 .services::after {
     content: '';
     display: block;
-    width: 50px;
+    width: 150px;
     height: 3px;
     background-color: #d4af37;
-    margin: 20px auto;
+    margin: 50px auto;
+    margin-top: 80px;
 }
 
 /* Services list */
@@ -30,7 +38,8 @@
 }
 
 .service-item {
-    width: 300px; /* Ajuster la largeur pour correspondre au design */
+    width: 300px;
+    height: 300px; 
     text-align: center;
     background-color: #f9f9f9;
     padding: 20px;

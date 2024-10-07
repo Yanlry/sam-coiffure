@@ -3,20 +3,40 @@
 /* Avis Section */
 .avis {
     padding: 100px 50px;
-    background-color: #1a1a1a;
+    background-color: #000000;
     text-align: center;
 }
 
 .avis h2 {
     font-size: 2.5rem;
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
+.avis p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-left:650px;
+    margin-right:650px;
+    margin-top: 50px;
+}
+
 .avis-list blockquote {
-    background: #333;
+    background: #ffffff;
     padding: 30px;
     margin: 20px auto;
     width: 60%;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quote-icon {
+    margin-top: 90px;
+}
+
+.prev {
+    width: 250px;
+}
+.next {
+    width: 250px;
 }
