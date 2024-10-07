@@ -1,0 +1,51 @@
+/* hero.css */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+.hero-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-item {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    transform: rotate(-10deg);
+}
+
+.hero-right {
+    width: 50%;
+    background-color: #e5d8ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-right h1 {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero-right p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+}

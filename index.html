@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon de Coiffure - Accueil</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/hero.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">ACCUEIL</a></li>
+                <li><a href="about.html">QUI SUIS-JE</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="tarifs.html">TARIFS</a></li>
+                <li><a href="galerie.html">GALERIE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-left">
+            <div class="image-collage">
+                <div class="image-item" style="background-image: url('image1.jpg');"></div>
+                <div class="image-item" style="background-image: url('image2.jpg');"></div>
+                <div class="image-item" style="background-image: url('image3.jpg');"></div>
+                <div class="image-item" style="background-image: url('image4.jpg');"></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <h1>ELIE TATTOO</h1>
+            <p>Oeuvres d'art éternelles ...</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Coupe et Stylisme</h3>
+                <p>Des coupes personnalisées pour hommes, femmes et enfants.</p>
+            </div>
+            <div class="service-item">
+                <h3>Coloration</h3>
+                <p>Colorations modernes et classiques pour sublimer votre style.</p>
+            </div>
+            <div class="service-item">
+                <h3>Soins Capillaires</h3>
+                <p>Soins nourrissants pour des cheveux en pleine santé.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="galerie">
+        <h2>Galerie</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('hero-background.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('hero-background.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('hero-background.jpg');"></div>
+        </div>
+    </section>
+
+
+    <section id="avis" class="avis">
+        <h2>Avis de nos Clients</h2>
+        <div class="avis-list">
+            <blockquote>
+                <p>"Service impeccable, je recommande vivement !" - Client A</p>
+            </blockquote>
+            <blockquote>
+                <p>"Une équipe professionnelle et accueillante." - Client B</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Nom du Salon]. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

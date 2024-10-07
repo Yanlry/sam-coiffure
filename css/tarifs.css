@@ -1,0 +1,54 @@
+/* tarifs.css */
+
+/* Tarifs Section */
+.tarifs {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.tarifs h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.tarif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.tarif-item {
+    background-color: #e5d8ca;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.tarif-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tarif-item .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tarif-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tarif-item ul li {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}

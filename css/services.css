@@ -1,0 +1,67 @@
+/* Services Section */
+.services {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.services::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 20px auto;
+}
+
+/* Services list */
+.service-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px; /* Augmenter l'écart entre les services */
+}
+
+.service-item {
+    width: 300px; /* Ajuster la largeur pour correspondre au design */
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Service Icons */
+.service-item img {
+    width: 100px; /* Augmenter la taille de l'icône pour correspondre à l'image */
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Service titles */
+.service-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Service descriptions */
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 250px; /* Limite la largeur du texte */
+}

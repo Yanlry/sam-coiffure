@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.nav-links li a.active {
+    border-bottom: 3px solid #000;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Qui suis-je Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-circle {
+    width: 350px;
+    height: 350px;
+    background-color: #e5d8ca;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-circle img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+}

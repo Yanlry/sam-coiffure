@@ -1,0 +1,22 @@
+/* avis.css */
+
+/* Avis Section */
+.avis {
+    padding: 100px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.avis h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.avis-list blockquote {
+    background: #333;
+    padding: 30px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
