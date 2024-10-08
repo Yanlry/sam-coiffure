@@ -1,17 +1,19 @@
 /* Galerie Section */
 .galerie {
-    padding: 100px 50px;
+    padding: 40px;
     background-color: #ffffff;
     text-align: center;
     overflow: hidden; /* Masquer les images qui dépassent */
 }
 
-.galerie h2 {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 40px;
+.galerie h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 80px;
+
 }
 
+/* Grille avec défilement horizontal pour la galerie d'accueil */
 .gallery-grid {
     display: flex; /* Utilise flexbox pour aligner les items horizontalement */
     gap: 20px; /* Espace entre les images */
@@ -32,6 +34,9 @@
     justify-content: center;
     transition: transform 0.3s ease;
     color: #fff;
+    background-size: cover; /* Remplit l'image dans le conteneur en la recadrant légèrement */
+    background-position: center; /* Centre l'image dans le conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition des images */
 }
 
 .gallery-item:hover {
@@ -41,4 +46,26 @@
 /* Supprime la barre de défilement pour une meilleure apparence */
 .gallery-grid::-webkit-scrollbar {
     display: none;
+}
+
+/* Grille pour la section "Galerie", affichage en lignes */
+.gallery-grid2 {
+    display: grid; /* Utilise CSS Grid pour la mise en page en grille */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonne flexible */
+    gap: 20px; /* Espace entre les images */
+    width: 100%; /* Occupe toute la largeur */
+}
+
+.gallery-grid2 .gallery-item {
+    background-color: #333;
+    width: 100%; /* Largeur ajustée selon la grille */
+    height: 400px; /* Hauteur fixe des images */
+    background-size: cover; /* Remplit l'image dans le conteneur */
+    background-position: center; /* Centre l'image dans le conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition des images */
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid2 .gallery-item:hover {
+    transform: scale(1.05); /* Petit effet de zoom au survol */
 }

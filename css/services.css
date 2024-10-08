@@ -1,22 +1,24 @@
-/* Services Section */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Évite le défilement horizontal si présent */
+}
+
 .services {
-    padding: 50px 50px;
+    min-height: 87vh; /* Assure que la section prenne toute la hauteur de la fenêtre */
+    padding: 40px;
     text-align: center;
     color: #ffffff;
     background-color: #111;
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
 }
 
 .services h1 {
     font-size: 2.5rem;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 50px; /* Ajoute un espace sous le titre */
     letter-spacing: 2px;
-}
-
-.services h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 100px;
 }
 
 .services::after {
@@ -33,34 +35,45 @@
 .service-list {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 100px; /* Augmenter l'écart entre les services */
+    align-items: center;
+    gap: 100px;
 }
 
+/* Multiplie la taille des services par 1.5 */
 .service-item {
-    width: 300px;
-    height: 300px; 
+    width: 450px;
+    height: 450px;
     text-align: center;
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 30px;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 450px;
+    
+    /* Transition pour que l'effet soit fluide */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Service Icons */
 .service-item img {
-    width: 100px; /* Augmenter la taille de l'icône pour correspondre à l'image */
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 20px;
+}
+
+/* Agrandissement lors du hover */
+.service-item:hover {
+    transform: scale(1.1); /* Agrandit légèrement le cercle */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre plus prononcé */
 }
 
 /* Service titles */
 .service-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.8rem; /* Augmenter la taille des titres */
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -69,8 +82,18 @@
 
 /* Service descriptions */
 .service-item p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Augmenter légèrement la taille du texte */
     color: #555;
     line-height: 1.6;
-    max-width: 250px; /* Limite la largeur du texte */
+    max-width: 300px; /* Ajuster la largeur du texte */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.875rem;
+    position: relative;
+    width: 100%;
 }

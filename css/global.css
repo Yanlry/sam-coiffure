@@ -1,16 +1,22 @@
 /* Global Styles */
+html {
+    height: 100%;
+}
+
 body {
-    font-family: 'Roboto', sans-serif; /* Utilisation de Roboto à la place de Verdana */
-    font-weight: 300; /* Définit le poids léger pour une apparence fine */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     color: #000000;
     background-color: #ffffff;
+    min-height: 100%; /* Assure que le body prend au moins la taille de la fenêtre */
+    position: relative; /* Position relative pour permettre au footer d'être absolu */
 }
 
 header {
     background-color: #ffffff;
-    height: 80px; /* Augmente la hauteur du header pour laisser de la place */
+    height: 80px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -39,7 +45,7 @@ nav ul li a {
     color: #000000;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 300; /* Rend les liens de navigation plus fins */
+    font-weight: 300;
     transition: color 0.3s ease;
     font-size: 18px;
 }
@@ -48,10 +54,14 @@ nav ul li a:hover {
     color: #d4af37;
 }
 
+/* Assure que le footer reste en bas si la page n'a pas assez de contenu */
 footer {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 30px 0;
     font-size: 0.875rem;
+    position: absolute; /* Rend le footer absolu par rapport au body */
+    bottom: 0;
+    width: 100%;
 }

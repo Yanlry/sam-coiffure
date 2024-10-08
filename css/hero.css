@@ -1,5 +1,3 @@
-/* hero.css */
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -10,7 +8,7 @@
 }
 
 .hero-left {
-    width: 50%; /* Utilise 50% de la largeur */
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,19 +35,46 @@
     width: 100%;
     height: 100%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Transition pour un effet fluide sur le survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Agrandissement lors du hover */
+.image-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
 }
 
 .hero-right {
-    width: 50%;
+    width: 40%;
     background-color: #e5d8ca;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
     text-align: center;
     position: relative;
     z-index: 1; /* Pour être sûr que cette section soit au-dessus */
+}
+
+.hero-right h1 {
+    font-size: 5rem;
+}
+
+.hero-right p {
+    font-size: 30px;
+}
+
+.hero-right button {
+    margin-top: 50px;
+    padding: 8px 16px;
+    background-color: #d9c5b2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: black;
 }
 
 /* Pour les petits écrans */

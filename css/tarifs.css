@@ -1,5 +1,3 @@
-/* tarifs.css */
-
 /* Tarifs Section */
 .tarifs {
     padding: 40px;
@@ -9,7 +7,7 @@
 
 .tarifs h1 {
     font-size: 2.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     color: #333;
 }
 
@@ -27,6 +25,15 @@
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    
+    /* Ajoute une transition fluide */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Agrandissement lors du hover */
+.tarif-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'élément tarif */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre plus prononcée */
 }
 
 .tarif-item h3 {
@@ -92,6 +99,10 @@
     border-radius: 5px;
     font-size: 1.9rem;
     cursor: pointer;
+}
+
+.tarif-list {
+    padding-bottom: 200px; /* Ajoute un espace entre le dernier tarif et le footer */
 }
 
 /* Pour les petits écrans */
