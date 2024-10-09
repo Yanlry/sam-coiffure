@@ -1,42 +1,55 @@
-/* avis.css */
-
 /* Avis Section */
 .avis {
-    padding: 100px 50px;
+    padding: 50px 50px;
     background-color: #000000;
     text-align: center;
+    height: 600px; /* Hauteur fixe pour la section noire */
 }
 
 .avis h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d1b798;
+    text-transform: uppercase;
 }
 
 .avis p {
     color: #ffffff;
     font-size: 1.5rem;
-    margin-left:650px;
-    margin-right:650px;
-    margin-top: 50px;
+    margin-top: 20px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    overflow: hidden;
 }
 
+/* Limiter la hauteur de la section blockquote pour éviter un débordement */
 .avis-list blockquote {
     background: #ffffff;
     padding: 30px;
     margin: 20px auto;
-    width: 60%;
+    max-width: 800px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #000;
 }
 
 .quote-icon {
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
-.prev {
-    width: 250px;
+.prev, .next {
+    width: 150px;
+    padding: 10px;
+    background-color: #d4af37;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
 }
-.next {
-    width: 250px;
+
+.prev:hover, .next:hover {
+    background-color: #b5952b;
 }

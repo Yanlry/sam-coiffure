@@ -1,16 +1,16 @@
 /* Qui suis-je Section */
 .about-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Remplace space-around par center pour centrer les éléments */
     align-items: center;
-    padding: 100px 50px;
-    max-width: 2500px;
+    max-width: 1200px; /* Tu peux réduire la taille maximale pour éviter un trop grand écart */
     margin: 0 auto;
+    padding: 40px 0; /* Ajoute un peu de padding pour aérer la section */
 }
 
 .about-content {
     width: 50%;
-    padding-right: 50px;
+    text-align: left; /* Assure que le texte est aligné à gauche */
 }
 
 .about-content h1 {
@@ -30,28 +30,26 @@
 }
 
 .about-image {
-    width: 90%;
+    width: 50%; /* Ajuste la largeur pour correspondre à celle du texte */
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
 }
 
 .image-circle {
-    width: 800px; /* Augmentez la largeur de 350px à 500px */
-    height: 800px; /* Augmentez la hauteur de 350px à 500px */
+    width: 100%; /* Ajuste la taille du conteneur de l'image pour être plus fluide */
+    height: 200%;
     background-color: #e5d8ca;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-left: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-circle img {
     width: 100%;
     height: auto;
+    object-fit: cover; /* Assure que l'image occupe bien l'espace tout en conservant ses proportions */
 }
 
 /* Footer */

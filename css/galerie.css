@@ -10,7 +10,14 @@
     font-size: 2.2rem;
     color: #333;
     margin-bottom: 80px;
+}
 
+.galerie h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d1b798;
+    margin-bottom: 100px;
+    text-transform: uppercase;
 }
 
 /* Grille avec défilement horizontal pour la galerie d'accueil */

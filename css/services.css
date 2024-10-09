@@ -53,7 +53,6 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: 450px;
-    
     /* Transition pour que l'effet soit fluide */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -87,6 +86,78 @@ html, body {
     line-height: 1.6;
     max-width: 300px; /* Ajuster la largeur du texte */
 }
+
+.services2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Assure que la section occupe toute la hauteur de la fenêtre */
+    text-align: center;
+    color: #ffffff;
+    background-color: #111;
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+    flex-direction: column; /* Pour centrer les éléments verticalement */
+}
+
+.service-list2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+}
+
+/* Multiplie la taille des services par 1.5 */
+.service-item2 {
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item2 img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.service-item2:hover {
+    transform: scale(1.1); /* Agrandit légèrement le cercle */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre plus prononcé */
+}
+
+.services2 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d1b798;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+/* Titre et texte */
+.service-item2 h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.service-item2 p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
 
 footer {
     background-color: #000;

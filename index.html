@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="css/about.css"> 
     <link rel="stylesheet" href="css/tarifs.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <!-- Menu Hamburger pour les petits écrans -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <!-- Icône hamburger pour les petits écrans -->
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> <!-- Utilisation d'une icône pour le hamburger -->
             </div>
+    
+            <!-- Menu de navigation -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="active">ACCUEIL</a></li>
                 <li><a href="about.html">QUI SUIS-JE</a></li>
@@ -69,20 +70,20 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services2">
         <h2>NOS SERVICES</h2>
-        <div class="service-list">
+        <div class="service-list2">
             <div class="service-item">
                 <img src="./images/maquillage.webp" alt="Maquillage permanent Icon" >
                 <h3>Coupe et Stylisme</h3>
                 <p>Des coupes personnalisées pour hommes, femmes et enfants.</p>
             </div>
-            <div class="service-item">
+            <div class="service-item2">
                 <img src="./images/maquillage.webp" alt="Maquillage permanent Icon">
                 <h3>Coloration</h3>
                 <p>Colorations modernes et classiques pour sublimer votre style.</p>
             </div>
-            <div class="service-item">
+            <div class="service-item2">
                 <img src="./images/maquillage.webp" alt="Maquillage permanent Icon">
                 <h3>Soins Capillaires</h3>
                 <p>Soins nourrissants pour des cheveux en pleine santé.</p>
@@ -204,6 +205,14 @@
     <!-- Lien vers ton script JavaScript -->
     <script src="js/carousel.js"></script>
     <script src="js/defilement.js"></script>
-    <script src="js/menuHamburger.js"></script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+    
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Ajoute ou enlève la classe active pour afficher le menu
+        });
+    </script>
+    
 </body>
 </html>
