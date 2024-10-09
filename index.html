@@ -17,7 +17,13 @@
 <body>
     <header>
         <nav>
-            <ul class="nav-links">
+            <!-- Menu Hamburger pour les petits écrans -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="active">ACCUEIL</a></li>
                 <li><a href="about.html">QUI SUIS-JE</a></li>
                 <li><a href="services.html">SERVICES</a></li>
@@ -26,6 +32,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
@@ -197,5 +204,6 @@
     <!-- Lien vers ton script JavaScript -->
     <script src="js/carousel.js"></script>
     <script src="js/defilement.js"></script>
+    <script src="js/menuHamburger.js"></script>
 </body>
 </html>
