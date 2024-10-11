@@ -111,6 +111,10 @@
     }
 
     .slider-controls {
-        margin-bottom: 40px;
+    margin-bottom: 40px;
     }
+
+    .slider-controls button {
+        background-color: #111;
+        }
 }
