@@ -104,18 +104,18 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 5vw; /* Espace entre les services basé sur la largeur de l'écran */
     flex-wrap: nowrap; /* Garde les services sur une seule ligne */
 }
 
-/* Multiplie la taille des services par 1.5 */
+/* Service items - Ajustement dynamique en fonction de la taille de l'écran */
 .service-item2 {
-    width: 450px;
-    height: 450px;
+    width: 15vw; /* Largeur en fonction de la taille de la fenêtre */
+    height: 15vw; /* Hauteur égale à la largeur pour former un cercle */
     text-align: center;
     background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 50%;
+    padding: 2vw; /* Padding ajusté en fonction de la taille de l'écran */
+    border-radius: 50%; /* Transforme en cercle */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@ html, body {
 }
 /* Titre et texte */
 .service-item2 h3 {
-    font-size: 1.8rem;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -152,10 +152,10 @@ html, body {
 }
 
 .service-item2 p {
-    font-size: 1.2rem;
+    font-size: 1.0vw;
     color: #555;
     line-height: 1.6;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 
