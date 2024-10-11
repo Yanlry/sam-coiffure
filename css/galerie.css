@@ -1,55 +1,31 @@
-
-
-/* Section Galerie */
 .galerie {
     background-color: #111;
     text-align: center;
-    overflow-x: hidden; /* Empêche le débordement horizontal du conteneur principal */
+    overflow-x: hidden; /* Empêche le débordement horizontal */
     padding: 20px;
 }
 
-.galerie h1 {
-    font-size: 2.2rem;
-    color: #d1b798;
-    margin-bottom: 10px;
-}
-
-.galerie h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #d1b798;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-/* Grille de la galerie avec défilement horizontal */
 .gallery-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Active le défilement horizontal */
-    scroll-behavior: smooth; /* Pour un défilement fluide */
+    display: flex; /* Arrange les images en ligne */
+    gap: 20px; /* Espace entre les items */
     padding-bottom: 20px;
-    -webkit-overflow-scrolling: touch; /* Pour un scrolling fluide sur mobile */
-    touch-action: pan-x; /* Améliore le défilement tactile horizontal */
-}
-
-.gallery-grid::-webkit-scrollbar {
-    display: none; /* Masque la barre de défilement sur WebKit */
+    overflow-x: hidden; /* Cache le défilement horizontal */
+    white-space: nowrap; /* Empêche les images de se mettre à la ligne */
 }
 
 .gallery-item {
-    flex: 0 0 auto; /* Empêche les items de rétrécir ou de s'étendre */
-    width: 500px; /* Largeur des images */
+    flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+    width: 300px; /* Largeur des images */
     height: 500px; /* Hauteur des images */
-    background-size: cover; /* Remplit l'image dans le conteneur */
-    background-position: center; /* Centre l'image dans le conteneur */
-    background-repeat: no-repeat; /* Empêche la répétition des images */
-    border-radius: 10px; /* Coins arrondis (optionnel) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Effet de zoom au survol */
+    transform: scale(1.05);
 }
 
 /* === Styles pour les téléphones mobiles === */
@@ -74,7 +50,7 @@
         font-weight: bold;
         color: #ffffff;
         text-transform: uppercase;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     .galerie {
@@ -83,15 +59,16 @@
     
     .gallery-grid {
         display: flex; /* Arrange les items en ligne */
-        gap: 10px; /* Espace entre les items */
+        gap: 20px; /* Espace entre les items */
         overflow-x: auto; /* Permet le défilement horizontal */
         white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
     }
     
     .gallery-item {
         flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-        width: 200px; /* Taille de chaque image, à ajuster selon tes préférences */
-        height: 200px; /* Taille de chaque image, à ajuster selon tes préférences */
+        width: 400px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 400px; /* Taille de chaque image, à ajuster selon tes préférences */
         background-size: cover;
         background-position: center;
         border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
