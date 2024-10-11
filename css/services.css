@@ -6,12 +6,11 @@ html, body {
 }
 
 .services {
-    min-height: 87vh; /* Assure que la section prenne toute la hauteur de la fenêtre */
+    min-height: auto; /* Assure que la section prenne toute la hauteur de la fenêtre */
     padding: 40px;
     text-align: center;
     color: #ffffff;
-    background-color: #111;
-    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+    background-color: #111; /* Inclut le padding dans la hauteur totale */
 }
 
 .services h1 {
@@ -108,10 +107,17 @@ html, body {
     flex-wrap: nowrap; /* Garde les services sur une seule ligne */
 }
 
-/* Service items - Ajustement dynamique en fonction de la taille de l'écran */
+/* Service items - Ajustement dynamique avec taille minimale et maximale */
 .service-item2 {
     width: 15vw; /* Largeur en fonction de la taille de la fenêtre */
     height: 15vw; /* Hauteur égale à la largeur pour former un cercle */
+    
+    /* Taille minimale et maximale */
+    min-width: 300px; /* Largeur minimale */
+    max-width: 300px; /* Largeur maximale */
+    min-height: 300px; /* Hauteur minimale */
+    max-height: 300px; /* Hauteur maximale */
+    
     text-align: center;
     background-color: #f9f9f9;
     padding: 2vw; /* Padding ajusté en fonction de la taille de l'écran */
@@ -123,6 +129,7 @@ html, body {
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .service-item2 img {
     width: 150px;
@@ -139,24 +146,26 @@ html, body {
     font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 100px;
     text-transform: uppercase;
+    margin-bottom: 100px;
 }
-/* Titre et texte */
+/* Titre - Taille de police dynamique avec une taille min et max */
 .service-item2 h3 {
-    font-size: 1.5vw;
+    font-size: clamp(25px, 1.5vw, 1vw); /* Taille minimale 16px, taille idéale 1.5vw, taille maximale 24px */
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
+/* Paragraphe - Taille de police dynamique avec une taille min et max */
 .service-item2 p {
-    font-size: 1.0vw;
+    font-size: clamp(20px, 1.0vw, 18px); /* Taille minimale 12px, taille idéale 1.0vw, taille maximale 18px */
     color: #555;
     line-height: 1.6;
     max-width: 500px;
 }
+
 
 
 footer {

@@ -20,7 +20,9 @@
 }
 
 .image-collage {
-    display: grid;
+    display: flex;
+    flex-wrap: nowrap; /* Empêche les images d'aller à la ligne */
+    justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adaptatif */
     grid-auto-rows: 1fr; /* Carré ajusté */
     gap: 10px;
@@ -48,7 +50,7 @@
 }
 
 .hero-right {
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,21 +61,25 @@
 }
 
 .hero-right h1 {
-    font-size: 5rem;
+    margin-top: 5px;
+    font-size: 4vw;
 }
 
 .hero-right p {
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .hero-right button {
+    width: 250px;
+    height: 50px;
     margin-top: 50px;
     padding: 8px 16px;
-    background-color: #d9c5b2;
+    background-color: #d4af37;
     border: none;
     border-radius: 5px;
     font-size: 1.3rem;
     cursor: pointer;
+    border-radius: 5px;
     color: black;
 }
 
@@ -112,13 +118,15 @@
 }
 
 .hero-text h1 {
-    font-size: 2vw; /* Ajuste la taille du texte pour une meilleure proportion sur desktop */
+    font-size: clamp(35px, 2vw, 3vw); /* Taille minimale 16px, taille idéale 1.5vw, taille maximale 24px */
     margin-bottom: 20px; /* Ajoute un espace sous le titre */
 }
 
 .hero-text button {
-    height: 5vh;
+    height: 4vh;
     width: 15vw;
+    min-height: 2vh;
+    min-width: 8vw;
     margin-top: 20px; /* Réduit l'espace entre le texte et le bouton */
     padding: 12px 24px;
     font-size: 1vw;

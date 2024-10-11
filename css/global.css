@@ -55,6 +55,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #d4af37;
+    font-weight: bold;
 }
 
 /* Assure que le footer reste en bas si la page n'a pas assez de contenu */

@@ -7,6 +7,8 @@
 
 .galerie h2 {
     font-size: 3rem;
+    margin-bottom: 150px;
+    margin-top: 100px;
     color: #ffffff;
 }
 .gallery-grid {
@@ -19,14 +21,14 @@
 
 .gallery-item {
     flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-    width: 700px; /* Largeur des images */
-    height: 800px; /* Hauteur des images */
+    width: 500px; /* Largeur des images */
+    height: 600px; /* Hauteur des images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .gallery-item:hover {

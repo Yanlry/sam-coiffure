@@ -34,17 +34,7 @@
     border-radius: 50%;
 }
 
-.image-circle {
-    width: 100%; /* Ajuste la taille du conteneur de l'image pour être plus fluide */
-    height: 200%;
-    background-color: #e5d8ca;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .image-circle img {
     width: 100%;
