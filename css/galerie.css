@@ -35,8 +35,8 @@
     .galerie {
         background-color: #111;
         text-align: center;
-        overflow-x: visible; /* Permet le défilement horizontal */
-        padding: 10px;
+        overflow-x: auto; /* Permet le défilement horizontal contrôlé par l'utilisateur */
+        padding: 20px;
     }
 
     .galerie h1 {
