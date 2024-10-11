@@ -3,13 +3,13 @@
 /* Contact Section */
 .contact {
     padding: 100px 50px;
-    background-color: #ffffff;
+    background-color: #111;
     text-align: center;
 }
 
 .contact h2 {
     font-size: 2.5rem;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
@@ -18,7 +18,7 @@ form {
     flex-direction: column;
     width: 40%;
     margin: 0 auto;
-    color: #000000;
+    color: #ffffff;
 }
 
 label {
@@ -31,7 +31,7 @@ input, textarea {
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #555;
-    background-color: #d0d0d0;
+    background-color: #ffffff;
     color: #fff;
 }
 

@@ -1,7 +1,7 @@
 /* Avis Section */
 .avis {
     padding: 50px 50px;
-    background-color: #000000;
+    background-color: #ffffff;
     text-align: center;
     height: 600px; /* Hauteur fixe pour la section noire */
 }
@@ -9,12 +9,12 @@
 .avis h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: #d1b798;
+    color: #111;
     text-transform: uppercase;
 }
 
 .avis p {
-    color: #ffffff;
+    color: #111;
     font-size: 1.5rem;
     margin-top: 20px;
     max-width: 50%;
@@ -35,6 +35,10 @@
     color: #000;
 }
 
+.rating i {
+    color: #FFD700; /* Code couleur pour du doré */
+    font-size: 20px; /* Ajuste la taille des étoiles selon tes besoins */
+}
 .quote-icon {
     margin-top: 20px;
 }

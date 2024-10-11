@@ -5,6 +5,10 @@
     padding: 20px;
 }
 
+.galerie h2 {
+    font-size: 3rem;
+    color: #ffffff;
+}
 .gallery-grid {
     display: flex; /* Arrange les images en ligne */
     gap: 20px; /* Espace entre les items */
@@ -15,13 +19,14 @@
 
 .gallery-item {
     flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-    width: 300px; /* Largeur des images */
-    height: 500px; /* Hauteur des images */
+    width: 700px; /* Largeur des images */
+    height: 800px; /* Hauteur des images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    margin-bottom: 50px;
 }
 
 .gallery-item:hover {
@@ -35,8 +40,8 @@
     .galerie {
         background-color: #111;
         text-align: center;
-        overflow-x: auto; /* Permet le défilement horizontal contrôlé par l'utilisateur */
-        padding: 20px;
+        overflow-x: visible; /* Permet le défilement horizontal */
+        padding: 10px;
     }
 
     .galerie h1 {
