@@ -1,7 +1,6 @@
 /* Galerie Section */
 .galerie {
-    padding: 40px;
-    background-color: #ffffff;
+    background-color: #111;
     text-align: center;
     overflow: hidden; /* Masquer les images qui dépassent */
 }
@@ -16,7 +15,6 @@
     font-size: 3rem;
     font-weight: bold;
     color: #d1b798;
-    margin-bottom: 100px;
     text-transform: uppercase;
 }
 
@@ -26,7 +24,7 @@
     gap: 20px; /* Espace entre les images */
     overflow-x: scroll; /* Activer le défilement horizontal */
     scroll-behavior: smooth; /* Pour un défilement fluide */
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     -webkit-overflow-scrolling: touch; /* Pour un scrolling fluide sur mobile */
     width: 100%; /* Assure que la grille occupe toute la largeur */
 }
@@ -75,4 +73,58 @@
 
 .gallery-grid2 .gallery-item:hover {
     transform: scale(1.05); /* Petit effet de zoom au survol */
+}
+
+
+/* Galerie Section - Mobile Version */
+@media (max-width: 1024px) {
+    .galerie {
+        background-color: #111;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .galerie h1 {
+        font-size: 2rem;
+        color: #d1b798;
+        margin-bottom: 20px;
+    }
+
+    .galerie h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #d1b798;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .gallery-item {
+        flex: 0 0 auto;
+        width: 250px;
+        height: 300px;
+        background-color: #333;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+        color: #fff;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+
+    .gallery-grid::-webkit-scrollbar {
+        display: none;
+    }
 }

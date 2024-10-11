@@ -231,7 +231,6 @@ footer {
     left: 20px;
 }
 
-/* Styles pour le menu contact */
 .contact-menu {
     visibility: hidden; /* Caché par défaut */
     opacity: 0;
@@ -242,18 +241,22 @@ footer {
     height: 100%; /* Prend toute la hauteur */
     z-index: 1000; /* Doit être devant l'overlay */
     transform: translateX(-100%); /* Initialement en dehors de l'écran à gauche */
-    background-color: #333; /* Fond du menu contact */
     color: #fff;
     padding: 20px;
     transition: transform 3s ease, opacity 3s ease, visibility 3s ease; /* Transition douce pour l'ouverture */
+    display: flex;
+    flex-direction: column; /* Les éléments sont affichés verticalement */
+    gap: 20px; /* Ajoute un espace entre chaque section */
 }
 
 /* Affichage du menu contact lorsqu'il est actif */
 .contact-menu.active {
+    display: flex;
     visibility: visible;
     opacity: 1;
     transform: translateX(0); /* Ramène le menu dans le cadre */
 }
+
 
 /* Icône de fermeture dans le menu contact */
 .close-contact-icon {
@@ -273,16 +276,12 @@ footer {
 
 
 .contact-telephone {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .contact-telephone h3 {
     font-weight: bold;
     font-size: 1.6rem;
-}
-
-.contact-horaires {
-    margin-top: 50px;
 }
 
 .contact-horaires h3 {

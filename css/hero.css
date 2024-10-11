@@ -1,4 +1,5 @@
-/* Hero Section */
+@media (min-width: 1025px) {
+    /* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -87,6 +88,45 @@
     display: none; /* Cachée par défaut */
 }
 
+.hero-price {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* Assure que l'image et le texte sont bien espacés */
+    padding: 0 50px; /* Ajoute du padding sur les côtés pour un alignement équilibré */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%; /* Limite la largeur de l'image */
+    display: flex;
+    justify-content: center; /* Centre horizontalement l'image dans son conteneur */
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement */
+    align-items: flex-start; /* Aligne le texte à gauche */
+    text-align: left; /* Assure que le texte est aligné à gauche */
+    padding-left: 50px; /* Ajoute un espace à gauche pour décaler le texte par rapport à l'image */
+}
+
+.hero-text h1 {
+    font-size: 6rem; /* Ajuste la taille du texte pour une meilleure proportion sur desktop */
+    margin-bottom: 20px; /* Ajoute un espace sous le titre */
+}
+
+.hero-text button {
+    height: 50px;
+    width: 400px;
+    margin-top: 20px; /* Réduit l'espace entre le texte et le bouton */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+}
+
 /* Pour les écrans de téléphone */
 @media (max-width: 1024px) {
     .hero-desktop {
@@ -109,9 +149,12 @@
     }
 
     .hero-image-mobile img {
-        width: 90%; /* L'image prend 90% de la largeur de l'écran */
-        height: auto; /* Ajuste la hauteur automatiquement */
-        margin-bottom: 20px; /* Espace sous l'image */
+        width: 130%;
+        height: auto;
+        margin-bottom: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); /* Recentre l'image */
     }
 
     .hero-content {
@@ -138,6 +181,7 @@
         margin-top: 0px; /* Réduisez cette valeur pour rapprocher le bouton du contenu au-dessus */
         padding: 10px 20px;
         background-color: #f5f5f5;
+        color: #111;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -149,4 +193,7 @@
         border-radius: 5px;
     }
 
+    .hero-price {
+        padding-bottom: 50px;
+    }
 }

@@ -48,3 +48,52 @@ button {
 button:hover {
     background-color: #b5952b;
 }
+
+/* Contact Section - Mobile Version */
+@media (max-width: 1024px) {
+    .contact {
+        padding: 20px;
+        background-color: #111;
+        text-align: center;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    label {
+        margin: 10px 0 5px;
+        font-size: 0.9rem;
+        color: #ffffff;
+    }
+
+    input, textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+        background-color: #d0d0d0;
+        color: #ffffff;
+    }
+
+    button {
+        padding: 12px;
+        background-color: #d4af37;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #b5952b;
+    }
+}

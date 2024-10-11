@@ -53,3 +53,60 @@
 .prev:hover, .next:hover {
     background-color: #b5952b;
 }
+
+/* Avis Section - Mobile Version */
+@media (max-width: 1024px) {
+    .avis {
+        padding: 20px;
+        background-color: #f1f1f1f1;
+        text-align: center;
+        height: auto; /* Ajuste la hauteur automatiquement pour le contenu */
+    }
+
+    .avis h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #111;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .avis p {
+        color: #111;
+        font-size: 1rem;
+        margin-top: 10px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4;
+    }
+
+    .avis-list blockquote {
+        background: #111;
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        color: #000;
+    }
+
+    .quote-icon {
+        margin-top: 10px;
+    }
+
+    .prev, .next {
+        width: 120px;
+        padding: 8px;
+        background-color: #d4af37;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: #b5952b;
+    }
+}
