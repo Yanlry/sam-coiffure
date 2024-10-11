@@ -60,3 +60,9 @@ footer {
     padding: 20px 0;
     font-size: 0.875rem;
 }
+
+@media (max-width: 768px) {
+    #about {
+        display: none;
+    }
+}

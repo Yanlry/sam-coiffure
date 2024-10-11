@@ -168,3 +168,55 @@ footer {
     position: relative;
     width: 100%;
 }
+
+/* Services Section Adjustments for Mobile */
+@media (max-width: 768px) {
+    .services2 {
+        padding: 10px; /* Réduit le padding pour gagner de l'espace */
+        text-align: center;
+    }
+
+    .services2 h2 {
+        font-size: 2rem; /* Diminue la taille du titre */
+        margin-bottom: 20px; /* Réduit l'espace en dessous du titre */
+    }
+
+    .service-list2 {
+        gap: 20px; /* Réduit l'espace entre les services */
+        margin-bottom: 20px; /* Réduit l'espace en dessous de la liste */
+        flex-direction: column; /* Assure que les services se placent en colonne */
+        align-items: center; /* Centre les services sur l'écran */
+    }
+
+    .service-item2 {
+        width: 90vw; /* Prend 90% de la largeur de l'écran pour un bon ajustement sur mobile */
+        max-width: 350px; /* Limite la largeur maximale pour les petits écrans */
+        height: auto; /* Ajuste automatiquement la hauteur */
+        padding: 20px; /* Réduit le padding */
+        background-color: #f9f9f9; /* Uniformise le fond */
+        border-radius: 20px; /* Uniformise la courbure */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Uniformise l'ombre */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-item2 img {
+        width: 80px; /* Diminue la taille des icônes */
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    
+    .service-item2 h3 {
+        font-size: 1.5rem; /* Diminue la taille du titre */
+    }
+    
+    .service-item2 p {
+        font-size: 1rem; /* Diminue la taille du texte */
+        max-width: none; /* Permet au texte de prendre toute la largeur disponible */
+    }
+    
+}

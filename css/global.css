@@ -92,7 +92,7 @@ nav ul {
     .menu-icon {
         display: block; /* Affiche l'icône hamburger */
     }
-
+    
     nav ul {
         display: none; /* Cacher le menu par défaut sur petits écrans */
         flex-direction: column;

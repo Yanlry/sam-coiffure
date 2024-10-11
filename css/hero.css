@@ -77,26 +77,74 @@
     color: black;
 }
 
-/* Pour les petits écrans */
+/* Version desktop visible par défaut */
+.hero-desktop {
+    display: flex; /* Visible sur les grands écrans */
+}
+
+/* Version mobile cachée par défaut */
+.hero-mobile {
+    display: none; /* Cachée par défaut */
+}
+
+/* Pour les écrans de téléphone */
 @media (max-width: 768px) {
-    .hero {
+    .hero-desktop {
+        display: none !important; /* Cache complètement la version desktop sur petits écrans */
+    }
+    
+    .hero-mobile {
+        display: flex;
+        align-items: center;
         flex-direction: column;
-        height: auto;
+        text-align: center;
+        background-color: #e5d8ca;
+        padding-bottom: 50px;
     }
 
-    .hero-left, .hero-right {
+    .hero .hero-content {
+        background-color: #e5d8ca;
+    }
+
+    .hero-image-mobile img {
+        width: 90%; /* L'image prend 90% de la largeur de l'écran */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        margin-bottom: 20px; /* Espace sous l'image */
+    }
+
+    .hero-content {
         width: 100%;
-        max-width: none;
+        max-width: 500px; /* Limite la largeur totale pour un meilleur alignement */
     }
 
-    .image-collage {
-        margin-left: 0;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Moins de colonnes sur petits écrans */
-        grid-auto-rows: 100px; /* Ajustement de la hauteur */
+    .hero-right h1 {
+        font-size: 2rem; /* Ajuste la taille de la police */
+        margin-bottom: 10px;
     }
 
-    .image-item {
-        height: 100px;
-        width: 100px;
+    .hero-right {
+        width: 100%; /* Prend la même largeur que l'image pour un meilleur alignement */
     }
+
+    .hero-right p {
+        font-size: 1.2rem; /* Ajuste la taille de la description */
+        margin-bottom: 15px;
+    }
+
+    .hero-right button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        background-color: #d9c5b2;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .hero-image-mobile img {
+        width: 100%; /* L'image prend la largeur complète disponible */
+        height: auto;
+        border-radius: 10px; /* Ajoute un petit arrondi pour améliorer l'apparence */
+        margin-bottom: 20px; /* Ajoute un espace sous l'image */
+    }
+
 }
