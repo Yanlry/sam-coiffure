@@ -17,56 +17,60 @@
 </head>
 <body>
     <header>
+        <div id="overlay"></div>
         <nav>
             <!-- Icône hamburger pour les petits écrans -->
-            <div class="menu-icon" id="menu-icon">
-                <i class="fas fa-bars"></i> <!-- Utilisation d'une icône pour le hamburger -->
-            </div>
-    
-            <!-- Menu de navigation -->
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">ACCUEIL</a></li>
-                <li><a href="about.html">QUI SUIS-JE</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="tarifs.html">TARIFS</a></li>
-                <li><a href="galerie.html">GALERIE</a></li>
-            </ul>
+            <!-- Icône hamburger pour les petits écrans -->
+<div class="menu-icon" id="menu-icon">
+    <i class="fas fa-bars"></i> <!-- Icône pour le hamburger -->
+</div>
+
+<!-- Menu de navigation -->
+<ul class="nav-links" id="nav-links">
+    <div class="close-icon" id="close-icon">
+        <i class="fas fa-times"></i> <!-- Icône de la croix pour fermer -->
+    </div>
+    <li><a href="index.html">ACCUEIL</a></li>
+    <li><a href="about.html">QUI SUIS-JE</a></li>
+    <li><a href="services.html">SERVICES</a></li>
+    <li><a href="tarifs.html">TARIFS</a></li>
+    <li><a href="galerie.html">GALERIE</a></li>
+</ul>
+
         </nav>
     </header>
     
-
-    <!-- Hero Section -->
    <!-- Hero Section - Version Desktop -->
-<section id="accueil" class="hero hero-desktop">
-    <div class="hero-left">
-        <div class="image-collage">
-            <div class="image-item" style="background-image: url('./images/coiffure1.jpg');"></div>
-            <div class="image-item" style="background-image: url('./images/coiffure2.jpeg');"></div>
-            <div class="image-item" style="background-image: url('./images/coiffure3.jpg');"></div>
-            <div class="image-item" style="background-image: url('./images/coiffure5.webp');"></div>
-            <div class="image-item" style="background-image: url('./images/coiffure1.jpg');"></div>
-        </div>
-    </div>
-    <div class="hero-right">
-        <h1>HAIR MAL</h1>
-        <p>Un style qui sublime vos cheveux.</p>
-        <button>DÉCOUVRIR</button>
-    </div>
-</section>
-
-<!-- Hero Section - Version Mobile -->
-<section id="accueil-mobile" class="hero-mobile">
-    <div class="hero-content">
-        <div class="hero-image-mobile">
-            <img src="./images/coiffure1.jpg" alt="Coiffure">
+    <section id="accueil" class="hero hero-desktop">
+        <div class="hero-left">
+            <div class="image-collage">
+                <div class="image-item" style="background-image: url('./images/coiffure1.jpg');"></div>
+                <div class="image-item" style="background-image: url('./images/coiffure2.jpeg');"></div>
+                <div class="image-item" style="background-image: url('./images/coiffure3.jpg');"></div>
+                <div class="image-item" style="background-image: url('./images/coiffure5.webp');"></div>
+                <div class="image-item" style="background-image: url('./images/coiffure1.jpg');"></div>
+            </div>
         </div>
         <div class="hero-right">
             <h1>HAIR MAL</h1>
             <p>Un style qui sublime vos cheveux.</p>
             <button>DÉCOUVRIR</button>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Hero Section - Version Mobile -->
+    <section id="accueil-mobile" class="hero-mobile">
+        <div class="hero-content">
+            <div class="hero-image-mobile">
+                <img src="./images/coiffure1.jpg" alt="Coiffure">
+            </div>
+            <div class="hero-right">
+                <h1>HAIR MAL</h1>
+                <p>Un style qui sublime vos cheveux.</p>
+                <button>DÉCOUVRIR</button>
+            </div>
+        </div>
+    </section>
 
     <section id="about" class="about-section">
         <div class="about-content">
@@ -228,6 +232,6 @@
             navLinks.classList.toggle('active'); // Ajoute ou enlève la classe active pour afficher le menu
         });
     </script>
-    
+    <script src="js/overlay.js"></script>
 </body>
 </html>

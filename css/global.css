@@ -54,6 +54,10 @@ nav ul li a:hover {
     color: #d4af37;
 }
 
+.close-icon {
+    display: none;
+}
+
 /* Assure que le footer reste en bas si la page n'a pas assez de contenu */
 footer {
     background-color: #000;
@@ -100,7 +104,6 @@ nav ul {
         top: 80px;
         right: 0;
         width: 100%;
-        background-color: #fff;
         text-align: center;
     }
 
@@ -115,4 +118,87 @@ nav ul {
     nav ul li a {
         font-size: 18px;
     }
+
+    
+    /* Overlay qui couvre tout le contenu pour créer un effet flou */
+/* Overlay qui couvre tout le contenu pour créer un effet flou */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+    backdrop-filter: blur(10px); /* Ajoute un effet de flou */
+    z-index: 900; /* Doit être derrière la navbar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transition douce et synchronisée avec le menu */
+}
+
+/* Transition d'opacité pour l'overlay lorsqu'il est actif */
+#overlay.active {
+    opacity: 1; /* Rend l'overlay visible */
+    visibility: visible;
+}
+
+/* Styles pour le menu mobile */
+.nav-links {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Pour rester fixe lorsque vous faites défiler */
+    right: 0;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de l'écran */
+    z-index: 1000; /* Doit être devant l'overlay */
+    transform: translateX(100%); /* Initialement en dehors de l'écran */
+    transition: transform 3s ease, opacity 3s ease, visibility 3s ease; /* Transition douce pour l'ouverture */
+    opacity: 0;
+    visibility: hidden;
+    display: flex; /* Utiliser flex pour centrer */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centre les éléments verticalement */
+}
+
+/* Affichage du menu mobile lorsqu'il est actif */
+.nav-links.active {
+    visibility: visible; /* Rendre visible */
+    opacity: 1;
+    transform: translateX(0); /* Ramène le menu dans le cadre */
+}
+
+
+
+/* Style des liens du menu mobile */
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold; /* Met le texte en gras */
+}
+
+.nav-links a:hover {
+    color: #d4af37; /* Change la couleur au survol */
+}
+
+/* Icône de fermeture dans le menu mobile */
+.close-icon {
+    display: block; /* Assurez-vous qu'elle soit visible par défaut */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #ffffff; /* Couleur de la croix (blanc) */
+    cursor: pointer;
+    z-index: 1100; /* Assurez-vous qu'elle soit au-dessus du menu */
+}
+
+
+   
+    
+
 }

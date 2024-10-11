@@ -92,7 +92,7 @@
     .hero-desktop {
         display: none !important; /* Cache complètement la version desktop sur petits écrans */
     }
-    
+
     .hero-mobile {
         display: flex;
         align-items: center;
