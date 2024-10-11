@@ -91,6 +91,10 @@
         color: #000;
     }
 
+    .rating i {
+        color: #FFD700; /* Code couleur pour du doré */
+        font-size: 20px; /* Ajuste la taille des étoiles selon tes besoins */
+    }
     .quote-icon {
         margin-top: 10px;
     }
@@ -117,4 +121,5 @@
     .slider-controls button {
         background-color: #111;
         }
+
 }
