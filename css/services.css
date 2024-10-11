@@ -99,13 +99,13 @@ html, body {
     flex-direction: column; /* Pour centrer les éléments verticalement */
 }
 
+/* Services list - Desktop version */
 .service-list2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-bottom: 50px;
-    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+    flex-wrap: nowrap; /* Garde les services sur une seule ligne */
 }
 
 /* Multiplie la taille des services par 1.5 */
