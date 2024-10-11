@@ -52,7 +52,7 @@ button:hover {
 /* Contact Section - Mobile Version */
 @media (max-width: 1024px) {
     .contact {
-        padding: 20px;
+        padding: 50px;
         background-color: #111;
         text-align: center;
     }

@@ -67,8 +67,8 @@
     
     .gallery-item {
         flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-        width: 400px; /* Taille de chaque image, à ajuster selon tes préférences */
-        height: 400px; /* Taille de chaque image, à ajuster selon tes préférences */
+        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
         background-size: cover;
         background-position: center;
         border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */

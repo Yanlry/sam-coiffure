@@ -109,4 +109,8 @@
     .prev:hover, .next:hover {
         background-color: #b5952b;
     }
+
+    .slider-controls {
+        margin-bottom: 40px;
+    }
 }
