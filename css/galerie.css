@@ -69,31 +69,26 @@
         margin-bottom: 50px;
     }
 
-    /* Grille de la galerie avec défilement horizontal */
+    .galerie {
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding: 20px 0;
+    }
+    
     .gallery-grid {
-        display: flex;
-        gap: 20px;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding-bottom: 50px;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-x;
+        display: flex; /* Arrange les items en ligne */
+        gap: 10px; /* Espace entre les items */
     }
-
-    .gallery-grid::-webkit-scrollbar {
-        display: none;
-    }
-
+    
     .gallery-item {
-        flex: 0 0 auto;
-        width: 250px;
-        height: 250px;
+        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+        width: 200px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 200px; /* Taille de chaque image, à ajuster selon tes préférences */
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
+        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
     }
+    
 
     .gallery-item:hover {
         transform: scale(1.05);
