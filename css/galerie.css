@@ -1,130 +1,67 @@
-/* Galerie Section */
+
+
+/* Section Galerie */
 .galerie {
     background-color: #111;
     text-align: center;
-    overflow: hidden; /* Masquer les images qui dépassent */
+    overflow-x: hidden; /* Empêche le débordement horizontal du conteneur principal */
+    padding: 20px;
 }
 
 .galerie h1 {
     font-size: 2.2rem;
-    color: #333;
-    margin-bottom: 80px;
+    color: #d1b798;
+    margin-bottom: 10px;
 }
 
 .galerie h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #d1b798;
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
-/* Grille avec défilement horizontal pour la galerie d'accueil */
+/* Grille de la galerie avec défilement horizontal */
 .gallery-grid {
-    display: flex; /* Utilise flexbox pour aligner les items horizontalement */
-    gap: 20px; /* Espace entre les images */
-    overflow-x: scroll; /* Activer le défilement horizontal */
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Active le défilement horizontal */
     scroll-behavior: smooth; /* Pour un défilement fluide */
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     -webkit-overflow-scrolling: touch; /* Pour un scrolling fluide sur mobile */
-    width: 100%; /* Assure que la grille occupe toute la largeur */
+    touch-action: pan-x; /* Améliore le défilement tactile horizontal */
+}
+
+.gallery-grid::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement sur WebKit */
 }
 
 .gallery-item {
-    background-color: #333;
-    flex: 0 0 auto; /* Assure que chaque image reste sur une ligne et ne se réduit pas */
-    width: 350px; /* Largeur fixe des images */
-    height: 400px; /* Hauteur fixe des images */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    color: #fff;
-    background-size: cover; /* Remplit l'image dans le conteneur en la recadrant légèrement */
-    background-position: center; /* Centre l'image dans le conteneur */
-    background-repeat: no-repeat; /* Empêche la répétition des images */
-}
-
-.gallery-item:hover {
-    transform: scale(1.05); /* Petit effet de zoom au survol */
-}
-
-/* Supprime la barre de défilement pour une meilleure apparence */
-.gallery-grid::-webkit-scrollbar {
-    display: none;
-}
-
-/* Grille pour la section "Galerie", affichage en lignes */
-.gallery-grid2 {
-    display: grid; /* Utilise CSS Grid pour la mise en page en grille */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonne flexible */
-    gap: 20px; /* Espace entre les images */
-    width: 100%; /* Occupe toute la largeur */
-}
-
-.gallery-grid2 .gallery-item {
-    background-color: #333;
-    width: 100%; /* Largeur ajustée selon la grille */
-    height: 400px; /* Hauteur fixe des images */
+    flex: 0 0 auto; /* Empêche les items de rétrécir ou de s'étendre */
+    width: 500px; /* Largeur des images */
+    height: 500px; /* Hauteur des images */
     background-size: cover; /* Remplit l'image dans le conteneur */
     background-position: center; /* Centre l'image dans le conteneur */
     background-repeat: no-repeat; /* Empêche la répétition des images */
+    border-radius: 10px; /* Coins arrondis (optionnel) */
     transition: transform 0.3s ease;
 }
 
-.gallery-grid2 .gallery-item:hover {
-    transform: scale(1.05); /* Petit effet de zoom au survol */
+.gallery-item:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
 }
 
-
-/* Galerie Section - Mobile Version */
-@media (max-width: 1024px) {
-    .galerie {
-        background-color: #111;
-        text-align: center;
-        overflow: hidden;
-    }
-
+/* Styles pour les écrans de petite taille */
+@media (max-width: 768px) {
     .galerie h1 {
-        font-size: 2rem;
-        color: #d1b798;
-        margin-bottom: 20px;
+        font-size: 1.8rem;
     }
-
     .galerie h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #d1b798;
-        text-transform: uppercase;
-        margin-bottom: 20px;
+        font-size: 1.5rem;
     }
-
-    .gallery-grid {
-        display: flex;
-        gap: 10px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        padding: 20px;
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
-    }
-
     .gallery-item {
-        flex: 0 0 auto;
         width: 250px;
-        height: 300px;
-        background-color: #333;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: transform 0.3s ease;
-        color: #fff;
-    }
-
-    .gallery-item:hover {
-        transform: scale(1.05);
-    }
-
-    .gallery-grid::-webkit-scrollbar {
-        display: none;
+        height: 250px;
     }
 }
