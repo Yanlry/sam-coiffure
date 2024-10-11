@@ -27,8 +27,10 @@ function autoScroll() {
     }
 }
 
-// Démarrer le défilement automatique
-setInterval(autoScroll, intervalSpeed); // Ajuste cette valeur pour la fluidité du défilement
+// Démarrer le défilement automatique uniquement si la largeur de la fenêtre est supérieure à 768 pixels
+if (window.innerWidth > 768) {
+    setInterval(autoScroll, intervalSpeed); // Démarre le défilement automatique uniquement sur grand écran
+}
 
 //DEFILEMENT
 let slideIndex = 0;
@@ -96,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //NAVBAR ACTIF/INATIF
 const menuIcon = document.getElementById('menu-icon');
-        const navLinks = document.getElementById('nav-links');
-    
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('active'); // Ajoute ou enlève la classe active pour afficher le menu
-        });
+const navLinks = document.getElementById('nav-links');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Ajoute ou enlève la classe active pour afficher le menu
+});
