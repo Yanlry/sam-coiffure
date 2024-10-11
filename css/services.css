@@ -170,7 +170,7 @@ footer {
 }
 
 /* Services Section Adjustments for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .services2 {
         padding: 10px; /* Réduit le padding pour gagner de l'espace */
         text-align: center;

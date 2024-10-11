@@ -88,7 +88,7 @@
 }
 
 /* Pour les écrans de téléphone */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero-desktop {
         display: none !important; /* Cache complètement la version desktop sur petits écrans */
     }
