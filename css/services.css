@@ -200,7 +200,7 @@ footer {
         width: 200px; /* Largeur égale à la hauteur pour obtenir un cercle */
         height: 200px;
         padding: 10px; /* Réduisez le padding pour éviter le débordement */
-        background-color: #d1b798; /* Fond foncé */
+        background-color: #ffffff; /* Fond foncé */
         border-radius: 50%; /* Rend l'élément circulaire */
         box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1); /* Ombre plus claire */
         text-align: center;

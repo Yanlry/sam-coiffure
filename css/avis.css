@@ -58,7 +58,7 @@
 @media (max-width: 1024px) {
     .avis {
         padding: 20px;
-        background-color: #f1f1f1f1;
+        background-color: #ffffffff;
         text-align: center;
         height: auto; /* Ajuste la hauteur automatiquement pour le contenu */
     }
