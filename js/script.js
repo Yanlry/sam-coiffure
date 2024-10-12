@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // CAROUSEL
-    const galleryGrid = document.querySelector('.gallery-grid');
+    const galleryGrid = document.querySelector('.gallery-grid-home');
     if (galleryGrid) {
         const originalItems = Array.from(galleryGrid.children); // Récupère les éléments d'origine
         const cloneCount = 2; // Nombre d'éléments à cloner
@@ -97,3 +97,44 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+//Carousel page galerie
+let slideIndex = 0;
+
+function showSlides(n) {
+    const slides = document.querySelectorAll('.carousel-item');
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+    slides[slideIndex].style.display = 'block';
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlides(slideIndex);
+});
+
+function openModal() {
+    document.getElementById('galleryModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('galleryModal').style.display = 'none';
+}
+
+function showImage(src) {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    carouselItems.forEach((item, index) => {
+        if (item.style.backgroundImage.includes(src)) {
+            slideIndex = index;
+            showSlides(slideIndex);
+            closeModal();
+        }
+    });
+}

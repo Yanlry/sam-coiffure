@@ -1,17 +1,17 @@
-.galerie {
+.galerie-home {
     background-color: #e2d7ce;
     text-align: center;
     overflow-x: hidden; /* Empêche le débordement horizontal */
     padding: 20px;
 }
 
-.galerie h2 {
+.galerie-home h2 {
     font-size: 3rem;
     margin-bottom: 100px;
     margin-top: 50px;
     color: #111;
 }
-.gallery-grid {
+.gallery-grid-home {
     display: flex; /* Arrange les images en ligne */
     gap: 20px; /* Espace entre les items */
     padding-bottom: 20px;
@@ -19,7 +19,7 @@
     white-space: nowrap; /* Empêche les images de se mettre à la ligne */
 }
 
-.gallery-item {
+.gallery-item-home {
     flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
     width: 500px; /* Largeur des images */
     height: 600px; /* Hauteur des images */
@@ -31,7 +31,7 @@
     margin-bottom: 50px;
 }
 
-.gallery-item:hover {
+.gallery-item-home:hover {
     transform: scale(1.05);
 }
 
@@ -39,7 +39,65 @@
 @media (max-width: 768px) {
 
     /* Section Galerie */
-    .galerie {
+    .galerie-home {
+        background-color: #111;
+        text-align: center;
+        overflow-x: visible; /* Permet le défilement horizontal */
+        padding: 10px;
+    }
+
+    .galerie-home h1 {
+        font-size: 1.8rem;
+        color: #d1b798;
+        margin-bottom: 50px;
+    }
+
+    .galerie-home h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .galerie-home {
+        padding: 20px 0;
+    }
+    
+    .gallery-grid-home{
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+        background-color: #111;
+    }
+
+    .gallery-grid2 {
+        height: 100vh;
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+    }
+    
+    .gallery-item-home {
+        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
+    }
+    
+
+    .gallery-item-home:hover {
+        transform: scale(1.05);
+    }
+
+     /* Section Galerie */
+     .galerie {
         background-color: #111;
         text-align: center;
         overflow-x: visible; /* Permet le défilement horizontal */
@@ -64,7 +122,7 @@
         padding: 20px 0;
     }
     
-    .gallery-grid {
+    .gallery-grid{
         display: flex; /* Arrange les items en ligne */
         gap: 20px; /* Espace entre les items */
         overflow-x: auto; /* Permet le défilement horizontal */
