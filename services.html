@@ -7,19 +7,55 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/services.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
+        <div id="overlay"></div>
         <nav>
-            <ul class="nav-links">
+            <div class="contact-icon" id="contact-icon">
+                <i class="fas fa-info-circle"></i> 
+            </div>
+            
+            <div>
+                <img src="images/logo.png" alt="logo" class="logo-icon">
+            </div>
+            
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> <!-- Icône pour le hamburger -->
+            </div>
+    
+            <ul class="nav-links" id="nav-links">
+                <div class="close-icon" id="close-icon">
+                    <i class="fas fa-times"></i> <!-- Icône de la croix pour fermer -->
+                </div>
                 <li><a href="index.html">ACCUEIL</a></li>
                 <li><a href="about.html">QUI SUIS-JE</a></li>
-                <li><a href="services.html" class="active">SERVICES</a></li>
-                <li><a href="tarifs.html">TARIFS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="tarifs.html" class="active">TARIFS</a></li>
                 <li><a href="galerie.html">GALERIE</a></li>
             </ul>
+    
+            <!-- Menu contact -->
+            <div class="contact-menu" id="contact-menu">
+                <div class="close-contact-icon" id="close-contact-icon">
+                    <i class="fas fa-times"></i> <!-- Icône de la croix pour fermer -->
+                </div>
+                <div class="contact-telephone" id="contact-telephone">
+                    <h3>Contactez-nous</h3>
+                    <a href="tel:+33123456789" class="phone-link"><strong>Téléphone</strong> : 01 23 45 67 89</a>
+                </div>
+                <div class="contact-horaires" id="contact-horaires">
+                    <h3>Horaires :</h3>
+                    <p><strong>Lundi</strong> : 13h - 04h</p>
+                    <p><strong>Mardi</strong> : 9h - 00h</p>
+                    <p><strong>Mercredi</strong> : 9h - 00h</p>
+                    <p><strong>Jeudi</strong> : 9h - 9h30</p>
+                    <p><strong>Vendredi</strong> : 9h - 00h</p>
+                    <p><strong>Samedi</strong> : Midi - Minuit</p>
+                    <p><strong>Dimanche</strong> : Fermé</p>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -47,5 +83,8 @@
     <footer>
         <p>&copy; 2024 [Nom du Salon]. Tous droits réservés.</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

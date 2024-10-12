@@ -1,5 +1,5 @@
 .galerie {
-    background-color: #111;
+    background-color: #e2d7ce;
     text-align: center;
     overflow-x: hidden; /* Empêche le débordement horizontal */
     padding: 20px;
@@ -7,9 +7,9 @@
 
 .galerie h2 {
     font-size: 3rem;
-    margin-bottom: 150px;
-    margin-top: 100px;
-    color: #ffffff;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    color: #111;
 }
 .gallery-grid {
     display: flex; /* Arrange les images en ligne */
@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .gallery-item:hover {
@@ -49,7 +49,7 @@
     .galerie h1 {
         font-size: 1.8rem;
         color: #d1b798;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
     }
 
     .galerie h2 {
@@ -65,6 +65,16 @@
     }
     
     .gallery-grid {
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+        background-color: #111;
+    }
+
+    .gallery-grid2 {
+        height: 100vh;
         display: flex; /* Arrange les items en ligne */
         gap: 20px; /* Espace entre les items */
         overflow-x: auto; /* Permet le défilement horizontal */

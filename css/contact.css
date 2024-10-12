@@ -2,14 +2,14 @@
 
 /* Contact Section */
 .contact {
-    padding: 100px 50px;
-    background-color: #111;
+    padding: 50px 50px;
+    background-color: #e2d7ce;
     text-align: center;
 }
 
 .contact h2 {
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #111;
     margin-bottom: 40px;
 }
 
@@ -18,7 +18,7 @@ form {
     flex-direction: column;
     width: 40%;
     margin: 0 auto;
-    color: #ffffff;
+    color: #111;
 }
 
 label {

@@ -1,16 +1,60 @@
 /* Qui suis-je Section */
+.about-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Ajoute un padding sur les côtés pour les petits écrans */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes sur petits écrans */
+}
+
+.about-content2 {
+    width: 50%;
+    text-align: left;
+}
+
+.about-content2 h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d1b798;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-content2 p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.about-image2 {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.image-circle2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Qui suis-je Section */
 .about-section {
     display: flex;
-    justify-content: center; /* Remplace space-around par center pour centrer les éléments */
+    justify-content: center;
     align-items: center;
-    max-width: 1200px; /* Tu peux réduire la taille maximale pour éviter un trop grand écart */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0; /* Ajoute un peu de padding pour aérer la section */
+    padding: 40px 20px; /* Ajoute un padding sur les côtés pour les petits écrans */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes sur petits écrans */
 }
 
 .about-content {
     width: 50%;
-    text-align: left; /* Assure que le texte est aligné à gauche */
+    text-align: left;
 }
 
 .about-content h1 {
@@ -30,16 +74,14 @@
 }
 
 .about-image {
-    width: 50%; /* Ajuste la largeur pour correspondre à celle du texte */
+    width: 50%;
     border-radius: 50%;
 }
-
-
 
 .image-circle img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Assure que l'image occupe bien l'espace tout en conservant ses proportions */
+    object-fit: cover;
 }
 
 /* Footer */
@@ -51,8 +93,47 @@ footer {
     font-size: 0.875rem;
 }
 
+/* Responsive adjustments for tablet and mobile */
 @media (max-width: 1024px) {
-    #about {
+    .about-section {
         display: none;
+    }
+    .about-section2 {
+        flex-direction: column; /* Passe les éléments en colonne */
+        text-align: center;
+        padding: 20px; /* Réduit le padding pour s'adapter aux petits écrans */
+        background-color: #111;
+    }
+
+    .about-content2, .about-image2 {
+        width: 100%; /* Les éléments occupent 100% de la largeur de l'écran */
+        margin-bottom: 20px; /* Ajoute un espace entre le texte et l'image */
+    }
+
+    .about-content2 h1 {
+        font-size: 2.5rem; /* Réduit la taille du titre */
+    }
+
+    .about-content2 p {
+        font-size: 1.1rem; /* Réduit légèrement la taille du texte */
+        color: #fff;
+    }
+
+    footer {
+        background-color: #111;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content2 h1 {
+        font-size: 2rem; /* Taille plus petite pour les téléphones */
+    }
+
+    .about-content2 p {
+        font-size: 1rem; /* Ajustement du texte pour un écran plus petit */
+    }
+
+    .about-section2 {
+        padding: 10px; /* Réduit le padding sur téléphone */
     }
 }

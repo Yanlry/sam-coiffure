@@ -7,10 +7,8 @@ html, body {
 
 .services {
     min-height: auto; /* Assure que la section prenne toute la hauteur de la fenêtre */
-    padding: 40px;
     text-align: center;
     color: #ffffff;
-    background-color: #111; /* Inclut le padding dans la hauteur totale */
 }
 
 .services h1 {
@@ -43,7 +41,7 @@ html, body {
     width: 450px;
     height: 450px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #e2d7ce;
     padding: 30px;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -93,7 +91,7 @@ html, body {
     min-height: 60vh; /* Assure que la section occupe toute la hauteur de la fenêtre */
     text-align: center;
     color: #ffffff;
-    background-color: #111;
+    background-color: #e2d7ce;
     box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
     flex-direction: column; /* Pour centrer les éléments verticalement */
 }
@@ -145,7 +143,7 @@ html, body {
 .services2 h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #111;
     text-transform: uppercase;
     margin-bottom: 100px;
 }
@@ -166,10 +164,8 @@ html, body {
     max-width: 500px;
 }
 
-
-
 footer {
-    background-color: #000;
+    background-color: #e2d7ce;
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -180,16 +176,54 @@ footer {
 
 
 
-
-
-
-
-
 /* Services Section Adjustments for Mobile */
 @media (max-width: 1024px) {
+    .services{
+        background-color: #111; /* Inclut le padding dans la hauteur totale */
+        }
+    .service-list {
+        flex-direction: column; /* Aligne les services en colonne */
+        gap: 20px; /* Réduit l'écart entre les services */
+    }
+    /* Maintenir les proportions des cercles */
+    .service-item {
+        max-width: 300px; /* Limite la taille maximale à 300px */
+        height: 300px;
+        min-height: 300px;
+        text-align: center;
+        background-color: #e2d7ce;
+        padding: 30px;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item img {
+        width: 100px; /* Réduit la taille de l'image pour l'adapter */
+        height: auto; /* Maintient les proportions de l'image */
+    }
+
+    .service-item h3 {
+        font-size: 1.2rem; /* Diminue la taille du titre */
+    }
+
+    .service-item p {
+        font-size: 1rem; /* Diminue la taille du texte */
+        line-height: 1.4; /* Ajuste l'espacement du texte */
+    }
+
+    .services h1 {
+        font-size: 2rem; /* Réduit la taille du titre principal */
+    }
     .services2 {
         padding: 10px;
         text-align: center;
+        background-color: #111;
+
     }
 
     .services2 h2 {
@@ -238,5 +272,9 @@ footer {
         max-width: 90%; /* Assurez-vous que le texte ne dépasse pas */
         line-height: 1.2rem; /* Réduisez l'espacement des lignes pour économiser de l'espace */
         color: #111; /* Texte en clair */
+    }
+
+    footer {
+        background-color: #111;
     }
 }

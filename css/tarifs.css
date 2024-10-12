@@ -82,23 +82,51 @@
     padding-bottom: 200px; /* Ajoute un espace entre le dernier tarif et le footer */
 }
 
-/* Pour les petits écrans */
-@media (max-width: 768px) {
-    .tarif-item {
-        width: 90%;
-    }
 
-    .hero-section {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .hero-image, .hero-text {
-        max-width: 100%;
-    }
-
-    .hero-text {
+/* Pour les petits écrans (mobile) */
+@media (max-width: 1024px) {
+    .tarifs {
+        padding: 40px;
+        background-color: #111; /* Fond sombre sur mobile */
         text-align: center;
     }
-    
+
+    .tarifs h1 {
+        font-size: 2rem;
+        color: #d4af37; /* Titre en couleur or sur mobile */
+        margin-bottom: 40px;
+    }
+
+    .tarif-item {
+        background-color: #ffffff; /* Fond légèrement plus clair que le fond global */
+        padding: 20px;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tarif-item h3 {
+        font-size: 1.5rem;
+        color: #d4af37; /* Couleur or pour les titres sur mobile */
+        margin-bottom: 10px;
+    }
+
+    .tarif-item .price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #111; /* Texte des prix en blanc pour le contraste */
+        margin-bottom: 10px;
+    }
+
+    .tarif-item ul li {
+        color: #111; /* Texte des éléments de liste en gris clair pour contraste */
+        margin: 5px 0;
+    }
+
+    footer {
+        background-color: #111;
+
+    }
 }
