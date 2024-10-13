@@ -5,6 +5,7 @@
     padding: 50px 50px;
     background-color: #e2d7ce;
     text-align: center;
+
 }
 
 .contact h2 {
@@ -43,6 +44,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 100px;
 }
 
 button:hover {
@@ -51,6 +53,7 @@ button:hover {
 
 /* Contact Section - Mobile Version */
 @media (max-width: 1024px) {
+    
     .contact {
         padding: 50px;
         background-color: #111;
@@ -91,6 +94,7 @@ button:hover {
         cursor: pointer;
         transition: background-color 0.3s ease;
         border-radius: 5px;
+        margin-bottom: 0; /* Supprime la marge pour la version mobile */
     }
 
     button:hover {

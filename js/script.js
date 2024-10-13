@@ -97,44 +97,63 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const modal = document.getElementById('galleryModal');
+const modalThumbnails = document.querySelectorAll('.modal-thumbnail');
 
-//Carousel page galerie
-let slideIndex = 0;
-
-function showSlides(n) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
-    slides.forEach(slide => {
-        slide.style.display = 'none';
-    });
-    slides[slideIndex].style.display = 'block';
-}
-
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides(slideIndex);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlides(slideIndex);
-});
-
-function openModal() {
-    document.getElementById('galleryModal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('galleryModal').style.display = 'none';
-}
-
-function showImage(src) {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    carouselItems.forEach((item, index) => {
-        if (item.style.backgroundImage.includes(src)) {
-            slideIndex = index;
-            showSlides(slideIndex);
-            closeModal();
+// Afficher l'image dans le carrousel
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.classList.remove('active');
+        if (i === index) {
+            img.classList.add('active');
         }
     });
+    currentIndex = index;
 }
+
+// Passer à l'image suivante
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+}
+
+// Passer à l'image précédente
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+}
+
+// Ouvrir le modal
+function openModal() {
+    modal.style.display = 'block';
+}
+
+// Fermer le modal
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Lorsque l'on clique sur une miniature dans le modal
+function showModalImage(index) {
+    showImage(index); // Affiche l'image sélectionnée dans le carrousel
+    closeModal(); // Ferme le modal
+}
+
+// Événement de fermeture du modal si on clique en dehors
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+document.querySelectorAll('.service-item-home').forEach(item => {
+    item.addEventListener('click', () => {
+        // Supprimer la classe active de tous les services
+        document.querySelectorAll('.service-item-home').forEach(el => el.classList.remove('active'));
+        
+        // Ajouter la classe active à l'élément cliqué
+        item.classList.add('active');
+    });
+});

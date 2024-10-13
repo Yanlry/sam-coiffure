@@ -64,24 +64,7 @@
         padding: 20px 0;
     }
     
-    .gallery-grid-home{
-        display: flex; /* Arrange les items en ligne */
-        gap: 20px; /* Espace entre les items */
-        overflow-x: auto; /* Permet le défilement horizontal */
-        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
-        padding-bottom: 40px;
-        background-color: #111;
-    }
 
-    .gallery-grid2 {
-        height: 100vh;
-        display: flex; /* Arrange les items en ligne */
-        gap: 20px; /* Espace entre les items */
-        overflow-x: auto; /* Permet le défilement horizontal */
-        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
-        padding-bottom: 40px;
-    }
-    
     .gallery-item-home {
         flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
         width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
@@ -96,49 +79,6 @@
         transform: scale(1.05);
     }
 
-     /* Section Galerie */
-     .galerie {
-        background-color: #111;
-        text-align: center;
-        overflow-x: visible; /* Permet le défilement horizontal */
-        padding: 10px;
-    }
-
-    .galerie h1 {
-        font-size: 1.8rem;
-        color: #d1b798;
-        margin-bottom: 50px;
-    }
-
-    .galerie h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-    }
-
-    .galerie {
-        padding: 20px 0;
-    }
-    
-    .gallery-grid{
-        display: flex; /* Arrange les items en ligne */
-        gap: 20px; /* Espace entre les items */
-        overflow-x: auto; /* Permet le défilement horizontal */
-        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
-        padding-bottom: 40px;
-        background-color: #111;
-    }
-
-    .gallery-grid2 {
-        height: 100vh;
-        display: flex; /* Arrange les items en ligne */
-        gap: 20px; /* Espace entre les items */
-        overflow-x: auto; /* Permet le défilement horizontal */
-        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
-        padding-bottom: 40px;
-    }
     
     .gallery-item {
         flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */

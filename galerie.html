@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon de Coiffure - Galerie</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/galerie.css">
+    <link rel="stylesheet" href="css/global.css"> <!-- Global styles -->
+    <link rel="stylesheet" href="css/gallery.css"> <!-- Gallery-specific styles -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -22,21 +22,20 @@
             </div>
             
             <div class="menu-icon" id="menu-icon">
-                <i class="fas fa-bars"></i> <!-- Icône pour le hamburger -->
+                <i class="fas fa-bars"></i>
             </div>
     
             <ul class="nav-links" id="nav-links">
                 <div class="close-icon" id="close-icon">
-                    <i class="fas fa-times"></i> <!-- Icône de la croix pour fermer -->
+                    <i class="fas fa-times"></i>
                 </div>
                 <li><a href="index.html">ACCUEIL</a></li>
                 <li><a href="about.html">QUI SUIS-JE</a></li>
                 <li><a href="services.html">SERVICES</a></li>
-                <li><a href="tarifs.html" class="active">TARIFS</a></li>
-                <li><a href="galerie.html">GALERIE</a></li>
+                <li><a href="tarifs.html">TARIFS</a></li>
+                <li><a href="galerie.html" class="active">GALERIE</a></li>
             </ul>
-    
-            <!-- Menu contact -->
+
             <div class="contact-menu" id="contact-menu">
                 <div class="close-contact-icon" id="close-contact-icon">
                     <i class="fas fa-times"></i> <!-- Icône de la croix pour fermer -->
@@ -59,9 +58,53 @@
         </nav>
     </header>
 
-    <section id="galerie" class="galerie">
+    <section id="galerie" class="galerie-desktop">
         <h1>GALERIE</h1>
-        <div class="gallery-grid2">
+
+       <!-- Carrousel d'images -->
+<div id="carousel" class="carousel">
+    <button class="prev" onclick="prevImage()">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="carousel-image-container">
+        <img src="./images/coiffure1.jpg" alt="Coiffure 1" class="carousel-image active">
+        <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="carousel-image">
+        <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="carousel-image">
+        <img src="./images/coiffure1.jpg" alt="Coiffure 3" class="carousel-image">
+        <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="carousel-image">
+        <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="carousel-image">
+        <img src="./images/coiffure1.jpg" alt="Coiffure 3" class="carousel-image">
+        <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="carousel-image">
+        <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="carousel-image">
+    </div>
+    <button class="next" onclick="nextImage()">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+        <!-- Bouton Voir Tout -->
+        <button id="viewAllBtn" class="view-all-btn" onclick="openModal()">Voir tout</button>
+        <!-- Modal -->
+        <div id="galleryModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="modal-gallery-grid">
+                    <img src="./images/coiffure1.jpg" alt="Coiffure 1" class="modal-thumbnail" onclick="showModalImage(0)">
+                    <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="modal-thumbnail" onclick="showModalImage(1)">
+                    <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="modal-thumbnail" onclick="showModalImage(2)">
+                    <img src="./images/coiffure1.jpg" alt="Coiffure 1" class="modal-thumbnail" onclick="showModalImage(0)">
+                    <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="modal-thumbnail" onclick="showModalImage(1)">
+                    <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="modal-thumbnail" onclick="showModalImage(2)">
+                    <img src="./images/coiffure1.jpg" alt="Coiffure 1" class="modal-thumbnail" onclick="showModalImage(0)">
+                    <img src="./images/coiffure2.jpeg" alt="Coiffure 2" class="modal-thumbnail" onclick="showModalImage(1)">
+                    <img src="./images/coiffure3.jpg" alt="Coiffure 3" class="modal-thumbnail" onclick="showModalImage(2)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="galerie">
+        <h2>GALERIE</h2>
+        <div class="gallery-grid">
             <div class="gallery-item" style="background-image: url('./images/coiffure1.jpg');"></div>
             <div class="gallery-item" style="background-image: url('./images/coiffure2.jpeg');"></div>
             <div class="gallery-item" style="background-image: url('./images/coiffure3.jpg');"></div>
@@ -81,6 +124,6 @@
         <p>&copy; 2024 [Nom du Salon]. Tous droits réservés.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Gallery-specific JS -->
 </body>
 </html>

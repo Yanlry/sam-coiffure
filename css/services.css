@@ -1,280 +1,291 @@
-html, body {
+html {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Évite le défilement horizontal si présent */
 }
 
-.services {
-    min-height: auto; /* Assure que la section prenne toute la hauteur de la fenêtre */
-    text-align: center;
-    color: #ffffff;
-}
-
-.services h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 50px; /* Ajoute un espace sous le titre */
-    letter-spacing: 2px;
-}
-
-.services::after {
-    content: '';
-    display: block;
-    width: 150px;
-    height: 3px;
-    background-color: #d4af37;
-    margin: 50px auto;
-    margin-top: 80px;
-}
-
-/* Services list */
-.service-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-}
-
-/* Multiplie la taille des services par 1.5 */
-.service-item {
-    width: 450px;
-    height: 450px;
-    text-align: center;
-    background-color: #e2d7ce;
-    padding: 30px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 450px;
-    /* Transition pour que l'effet soit fluide */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Service Icons */
-.service-item img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-/* Agrandissement lors du hover */
-.service-item:hover {
-    transform: scale(1.1); /* Agrandit légèrement le cercle */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre plus prononcé */
-}
-
-/* Service titles */
-.service-item h3 {
-    font-size: 1.8rem; /* Augmenter la taille des titres */
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-/* Service descriptions */
-.service-item p {
-    font-size: 1.2rem; /* Augmenter légèrement la taille du texte */
-    color: #555;
-    line-height: 1.6;
-    max-width: 300px; /* Ajuster la largeur du texte */
-}
-
-.services2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh; /* Assure que la section occupe toute la hauteur de la fenêtre */
-    text-align: center;
-    color: #ffffff;
-    background-color: #e2d7ce;
-    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
-    flex-direction: column; /* Pour centrer les éléments verticalement */
-}
-
-/* Services list - Desktop version */
-.service-list2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw; /* Espace entre les services basé sur la largeur de l'écran */
-    flex-wrap: nowrap; /* Garde les services sur une seule ligne */
-}
-
-/* Service items - Ajustement dynamique avec taille minimale et maximale */
-.service-item2 {
-    width: 15vw; /* Largeur en fonction de la taille de la fenêtre */
-    height: 15vw; /* Hauteur égale à la largeur pour former un cercle */
-    
-    /* Taille minimale et maximale */
-    min-width: 300px; /* Largeur minimale */
-    max-width: 300px; /* Largeur maximale */
-    min-height: 300px; /* Hauteur minimale */
-    max-height: 300px; /* Hauteur maximale */
-    
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 2vw; /* Padding ajusté en fonction de la taille de l'écran */
-    border-radius: 50%; /* Transforme en cercle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.service-item2 img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-.service-item2:hover {
-    transform: scale(1.1); /* Agrandit légèrement le cercle */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre plus prononcé */
-}
-
-.services2 h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #111;
-    text-transform: uppercase;
-    margin-bottom: 100px;
-}
-/* Titre - Taille de police dynamique avec une taille min et max */
-.service-item2 h3 {
-    font-size: clamp(25px, 1.5vw, 1vw); /* Taille minimale 16px, taille idéale 1.5vw, taille maximale 24px */
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-/* Paragraphe - Taille de police dynamique avec une taille min et max */
-.service-item2 p {
-    font-size: clamp(20px, 1.0vw, 18px); /* Taille minimale 12px, taille idéale 1.0vw, taille maximale 18px */
-    color: #555;
-    line-height: 1.6;
-    max-width: 500px;
+body {
+    position: relative;
+    min-height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+    margin: 0;
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #e2d7ce;
     color: #fff;
     text-align: center;
     padding: 30px 0;
     font-size: 0.875rem;
+}
+
+.services {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
+    color: #333;
+    position: relative;
+}
+
+.services h1::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #d4af37;
+    margin: 20px auto 0;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0 50px;
+}
+
+/* Service Item */
+.service-item {
     position: relative;
     width: 100%;
+    max-width: 350px;
+    height: 450px;
+    background: linear-gradient(135deg, #1d1d1d, #434343);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
+    /* Utilisation de Flexbox pour centrer verticalement et horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Assurez-vous que l'élément est au-dessus */
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.service-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px) brightness(0.7);
+    transition: filter 0.3s ease;
+    z-index: -1; /* Place l'image derrière tout */
+}
+
+/* Overlay et texte */
+.service-item h3,
+.service-item p {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.service-item p {
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+}
+
+.service-item:hover p {
+    opacity: 1;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.4s ease;
+    z-index: 1;
+}
+
+.service-item:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.service-item button {
+    position: relative;
+    z-index: 2; /* S'assure que le bouton est au-dessus de tout */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+    background-color: #b5952b;
+}
+
+/* Centrer le titre des services */
+#services-index {
+    text-align: center;
+    padding: 50px;
+    background-color: #e2d7ce;
+}
+
+#services-index h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+/* Conteneur des services */
+.service-list-home {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+/* Styles par défaut des services */
+.service-item-home {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+
+    /* Centrer verticalement et horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Assure une hauteur constante pour les services */
+}
+
+.service-item-home h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-item-home button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #bbb;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Centrer aussi le paragraphe */
+.service-item-home p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.service-item-home button:hover {
+    background-color: #d4af37;
 }
 
 
+/* Lorsque l'élément est actif (cliqué) */
+.service-item-home.active {
+    flex: 2;
+}
 
-/* Services Section Adjustments for Mobile */
+.service-item-home.active p {
+    display: block;
+}
+
+.service-item-home.active button {
+    background-color: #d4af37;
+}
+
+/* Les services non actifs (rétrécis) */
+.service-item-home:not(.active) {
+    flex: 1;
+}
+
+/* Styles pour mobile */
 @media (max-width: 1024px) {
-    .services{
-        background-color: #111; /* Inclut le padding dans la hauteur totale */
-        }
-    .service-list {
-        flex-direction: column; /* Aligne les services en colonne */
-        gap: 20px; /* Réduit l'écart entre les services */
-    }
-    /* Maintenir les proportions des cercles */
-    .service-item {
-        max-width: 300px; /* Limite la taille maximale à 300px */
-        height: 300px;
-        min-height: 300px;
-        text-align: center;
-        background-color: #e2d7ce;
-        padding: 30px;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
+    .service-list-home {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-item img {
-        width: 100px; /* Réduit la taille de l'image pour l'adapter */
-        height: auto; /* Maintient les proportions de l'image */
-    }
-
-    .service-item h3 {
-        font-size: 1.2rem; /* Diminue la taille du titre */
-    }
-
-    .service-item p {
-        font-size: 1rem; /* Diminue la taille du texte */
-        line-height: 1.4; /* Ajuste l'espacement du texte */
-    }
-
-    .services h1 {
-        font-size: 2rem; /* Réduit la taille du titre principal */
-    }
-    .services2 {
-        padding: 10px;
-        text-align: center;
-        background-color: #111;
-
-    }
-
-    .services2 h2 {
-        font-size: 2rem;
-        margin-bottom: 50px;
-        color: #ffffff; /* Titre en foncé */
-    }
-
-    .service-list2 {
         gap: 20px;
-        margin-bottom: 20px;
-        flex-direction: column;
-        align-items: center;
     }
 
-    .service-item2 {
-        width: 200px; /* Largeur égale à la hauteur pour obtenir un cercle */
-        height: 200px;
-        padding: 10px; /* Réduisez le padding pour éviter le débordement */
-        background-color: #ffffff; /* Fond foncé */
-        border-radius: 50%; /* Rend l'élément circulaire */
-        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1); /* Ombre plus claire */
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre le contenu verticalement */
-        align-items: center; /* Centre le contenu horizontalement */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        overflow: hidden; /* Cache tout contenu qui dépasse */
+    .service-item-home {
+        width: 100%; /* Largeur complète pour chaque service */
+        transition: all 0.3s ease; /* Ajouter une transition pour l'animation */
+        flex: 1; /* Flex par défaut */
     }
 
-    .service-item2 img {
-        width: 60px; /* Réduisez la taille des icônes pour mieux s'adapter au cercle */
-        height: 60px;
-        margin-bottom: 10px;
+    .service-item-home.active {
+        flex: 2.5; /* Augmenter la taille pour l'élément actif */
+        transition: flex 0.3s ease; /* Animation fluide */
+        height: auto; /* S'assurer que la hauteur s'ajuste pour l'actif */
     }
 
-    .service-item2 h3 {
-        font-size: 1rem; /* Réduisez la taille du titre */
-        margin-bottom: 5px; /* Réduisez l'espace entre le titre et le texte */
-        color: #111; /* Texte en clair */
+    .service-item-home p {
+        display: none; /* Par défaut, cacher le texte */
     }
 
-    .service-item2 p {
-        font-size: 0.9rem; /* Réduisez la taille du texte pour l'adapter au cercle */
-        max-width: 90%; /* Assurez-vous que le texte ne dépasse pas */
-        line-height: 1.2rem; /* Réduisez l'espacement des lignes pour économiser de l'espace */
-        color: #111; /* Texte en clair */
+    .service-item-home.active p {
+        display: block; /* Afficher le texte pour l'élément actif */
     }
 
-    footer {
-        background-color: #111;
+    .service-item-home.active button {
+        background-color: #d4af37; /* Changement de couleur pour le bouton actif */
+    }
+
+    /* Réduire la taille des services non actifs */
+    .service-item-home:not(.active) {
+        flex: 0.8; /* Réduire la taille pour les services non actifs */
+        transition: flex 0.3s ease; /* Animation fluide */
     }
 }

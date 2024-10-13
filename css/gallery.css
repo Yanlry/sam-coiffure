@@ -1,0 +1,276 @@
+/* Section Galerie-desktop */
+.galerie-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement la galerie-desktop */
+    justify-content: center;
+    text-align: center;
+    background-color: #fff; /* Ajuste la couleur selon ton besoin */
+    padding: 20px;
+}
+
+/* Titre de la Galerie-desktop */
+.galerie-desktop h1 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+/* Style pour le carrousel */
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    height: 900px;
+    width: 900px;
+}
+
+.carousel-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+/* Boutons de navigation (Précédent et Suivant) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%; /* Forme ronde */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prev {
+    left: -25px;
+}
+
+.next {
+    right: -25px;
+}
+
+/* Effet au survol */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Icônes plus modernes avec FontAwesome */
+.prev i, .next i {
+    font-size: 24px; /* Taille de l'icône */
+}
+
+/* Voir tout bouton */
+.view-all-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #333;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100; 
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-gallery-grid {
+    gap: 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Style pour les miniatures dans le modal */
+.modal-thumbnail {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.modal-large-image {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20px 0;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (min-width: 1025px) {
+    .galerie {
+        display: none;
+    }}
+/* === Styles pour les téléphones mobiles === */
+@media (max-width: 1024px) {
+    .galerie-desktop {
+        display: none;
+    }
+
+    /* Section Galerie */
+    .galerie {
+        background-color: #111;
+        text-align: center;
+        overflow-x: visible; /* Permet le défilement horizontal */
+        padding: 10px;
+    }
+
+    .galerie h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        height: 100vh;
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+    }
+    
+    .gallery-item-home {
+        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
+    }
+    
+
+    .gallery-item-home:hover {
+        transform: scale(1.05);
+    }
+
+     /* Section Galerie-desktop */
+     .galerie-desktop {
+        background-color: #111;
+        text-align: center;
+        overflow-x: visible; /* Permet le défilement horizontal */
+        padding: 10px;
+    }
+
+    .galerie-desktop h1 {
+        font-size: 1.8rem;
+        color: #d1b798;
+        margin-bottom: 50px;
+    }
+
+    .galerie-desktop h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .galerie-desktop {
+        padding: 20px 0;
+    }
+    
+    .gallery-grid{
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+        background-color: #111;
+    }
+
+    .gallery-grid2 {
+        height: 100vh;
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
+    }
+    
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+}
+
+
