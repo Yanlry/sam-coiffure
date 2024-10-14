@@ -467,9 +467,11 @@ footer {
 .body {
     background-color: #111;
 }
+
 footer {
     background-color: #111;
     color: #fff;
+    font-size: 8px;
 }
 
 }

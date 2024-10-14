@@ -308,5 +308,6 @@ footer {
     footer {
         background-color: #111;
         color: #fff;
+        font-size: 8px;
     }
 }

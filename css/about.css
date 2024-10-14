@@ -200,7 +200,7 @@ footer {
         }
     
         .about-content p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #fff;
             text-align: left;
         }
@@ -208,6 +208,7 @@ footer {
         footer {
             background-color: #111;
             color: #fff;
+            font-size: 8px;
         }
     }
     
