@@ -1,8 +1,15 @@
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 footer {
-    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
     color: #111;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.875rem;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
@@ -110,22 +117,36 @@ footer {
 }
 
 .price-item {
-    background-color: #fcf2e4;
-    padding: 15px;
+    background: linear-gradient(135deg, #e2d7ce 0%, #eeeeee 50%, #eaeaea 100%);
+    padding: 35px;
+    padding-left: 50px;
     width: 75%;
-    border-radius: 10px;
+    border-radius: 100px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    
-    /* Ajoute une transition fluide */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
     cursor: pointer; /* Indique qu'il est interactif */
+
+    /* Animation de gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
 }
 
-/* Agrandissement lors du hover */
 .price-item:hover {
     transform: scale(1.05); /* Agrandit légèrement l'élément tarif au survol */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .price-item h3 {
@@ -185,7 +206,7 @@ footer {
 
 
     .price-section h1 {
-        font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
+        font-size: 1.5rem; /* Augmente la taille du titre pour plus de présence */
         font-weight: 700; /* Texte en gras pour un effet plus puissant */
         color: #333; /* Un gris foncé pour un bon contraste */
         text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
@@ -218,13 +239,36 @@ footer {
     }
 
     .price-item {
-        background-color: #ffffff; /* Fond légèrement plus clair que le fond global */
-        padding: 20px;
-        width: 90%;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #e2d7ce 0%, #eeeeee 50%, #eaeaea 100%);
+        padding: 35px;
+        padding-left: 50px;
+        width: 75%;
+        border-radius: 50px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+        cursor: pointer; /* Indique qu'il est interactif */
+    
+        /* Animation de gradient */
+        background-size: 300% 300%;
+        animation: gradientAnimation 5s ease infinite;
+    }
+    
+    .price-item:hover {
+        transform: scale(1.05); /* Agrandit légèrement l'élément tarif au survol */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    }
+    
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     .price-item h3 {

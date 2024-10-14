@@ -43,7 +43,7 @@
 .home-gallery-item {
     flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
     width: 400px; /* Largeur des images */
-    height: 300px; /* Hauteur des images */
+    height: 400px; /* Hauteur des images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,7 +100,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 }
 
 

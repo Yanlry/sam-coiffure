@@ -36,7 +36,7 @@ footer {
 
 .home-services-index h2 {
     font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     color: #111; /* Une couleur plus sombre pour plus de contraste */
     letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
     text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
@@ -68,11 +68,10 @@ footer {
     margin-bottom: 50px;
 }
 
-/* Styles par défaut des services */
 .home-service-item {
     flex: 1;
-    background-color: #f9f9f9;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #e2d7ce 0%, #ffffff 50%, #ffffff 100%);
+    border-radius: 50px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -86,6 +85,22 @@ footer {
     justify-content: center;
     align-items: center;
     height: 250px; /* Assure une hauteur constante pour les services */
+
+    /* Animation de gradient */
+    background-size: 300% 300%; 
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Cacher le contenu (paragraphe et bouton) par défaut */
@@ -107,7 +122,7 @@ footer {
 
 /* Styles des titres des services */
 .home-service-item h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
@@ -150,7 +165,7 @@ footer {
 
 .service-section h2 {
     font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     color: #333; /* Une couleur plus sombre pour plus de contraste */
     letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
     text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
@@ -181,11 +196,10 @@ footer {
     margin-bottom: 50px;
 }
 
-/* Styles par défaut des services */
 .service-item {
     flex: 1;
-    background-color: #fefdf9;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #e2d7ce 0%, #eeeeee 50%, #eaeaea 100%);
+    border-radius: 50px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -198,8 +212,25 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250px; /* Assure une hauteur constante pour les services */
+    height: 350px; /* Assure une hauteur constante pour les services */
+
+    /* Animation de gradient */
+    background-size: 300% 300%; 
+    animation: gradientAnimation 5s ease infinite;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 /* Cacher le contenu par défaut */
 .service-item p,
@@ -220,7 +251,7 @@ footer {
 
 /* Styles des titres de services */
 .service-item h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
@@ -345,7 +376,7 @@ footer {
     background-color: #111;
 }
 .service-section h2 {
-    font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
+    font-size: 1.5rem; /* Augmente la taille du titre pour plus de présence */
     font-weight: 700; /* Texte en gras pour un effet plus puissant */
     color: #333; /* Un gris foncé pour un bon contraste */
     text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
@@ -423,16 +454,19 @@ footer {
 }
 
 /* Ajuster la taille du titre sur mobile */
-.service-list h2 {
-    font-size: 2rem;
+.service-list h3 {
+    font-size: 1rem;
     font-weight: bold;
     color: #111;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-
+.body {
+    background-color: #111;
+}
 footer {
     background-color: #111;
+    color: #fff;
 }
 
 }

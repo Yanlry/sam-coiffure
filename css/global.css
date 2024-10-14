@@ -4,22 +4,37 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
     margin: 0;
     padding: 0;
-    color: #000000;
-    background-color: #ffffff;
-    min-height: 100%; /* Assure que le body prend au moins la taille de la fenêtre */
-    position: relative; /* Position relative pour permettre au footer d'être absolu */
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Assure que le contenu occupe tout l'espace disponible */
+main {
+    flex-grow: 1; /* Permet à main de prendre tout l'espace restant */
+}
+
+/* Footer fixe en bas */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative; /* Le footer reste en position relative */
+}
+
+/* Autres styles */
 header {
     background-color: #ffffff;
     height: 80px;
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav {
@@ -58,17 +73,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Assure que le footer reste en bas si la page n'a pas assez de contenu */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.875rem;
-    position: absolute; /* Rend le footer absolu par rapport au body */
-    bottom: 0;
-    width: 100%;
-}
+
 
 /* Masquer l'icône hamburger par défaut, l'afficher seulement sur les petits écrans */
 .menu-icon {
@@ -100,14 +105,34 @@ footer {
 /* Cacher le menu sur mobile par défaut */
 @media (max-width: 1024px) {
 
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden; /* Empêche le défilement horizontal non désiré */
-        touch-action: manipulation; /* Améliore la gestion des gestes tactiles sur mobile */
-    }
+   /* Global Styles */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Assure que le contenu occupe tout l'espace disponible */
+main {
+    flex-grow: 1; /* Permet à main de prendre tout l'espace restant */
+}
+
+/* Footer fixe en bas */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative; /* Le footer reste en position relative */
+}
     
     .hero, .home-about-section, .home-gallery, .contact, footer {
         width: 100%; /* Force les sections à toujours occuper la largeur entière de l'écran */
