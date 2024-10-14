@@ -99,6 +99,32 @@ footer {
 
 /* Cacher le menu sur mobile par défaut */
 @media (max-width: 1024px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* Empêche le défilement horizontal non désiré */
+        touch-action: manipulation; /* Améliore la gestion des gestes tactiles sur mobile */
+    }
+    
+    .hero, .home-about-section, .home-gallery, .contact, footer {
+        width: 100%; /* Force les sections à toujours occuper la largeur entière de l'écran */
+        max-width: 100vw; /* Empêche la mise à l'échelle trop large */
+        box-sizing: border-box; /* Inclut les marges dans la largeur totale */
+    }
+    
+    .hero-mobile img {
+        max-width: 100%; /* S'assure que les images ne dépassent jamais l'écran */
+        height: auto; /* Préserve les proportions de l'image */
+    }
+    
+    button {
+        width: auto; /* Ajuste la taille du bouton automatiquement */
+    }
+
+    
     .menu-icon {
         display: block; /* Affiche l'icône hamburger */
     }
