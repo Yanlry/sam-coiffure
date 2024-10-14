@@ -360,16 +360,6 @@ footer {
     -webkit-text-fill-color: transparent;
 }
 
-/* Ajout d'une ligne décorative dorée sous le titre */
-.service-section h2::after {
-    content: '';
-    display: block;
-    width: 100px; /* Largeur de la ligne */
-    height: 4px; /* Épaisseur de la ligne */
-    background-color: #d4af37; /* Doré pour plus d'élégance */
-    margin: 10px auto; /* Centre la ligne sous le titre */
-    border-radius: 2px; /* Arrondi les bords pour un effet moderne */
-}
 
 /* Animation pour faire apparaître le titre */
 .service-section h2 {

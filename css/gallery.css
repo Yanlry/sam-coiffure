@@ -335,6 +335,11 @@ footer {
     .gallery-item:hover {
         transform: scale(1.05);
     }
+
+    footer {
+        background-color: #111;
+        color: #fff;
+    }
 }
 
 
