@@ -1,5 +1,16 @@
-/* Qui suis-je Section */
-.about-section2 {
+/* --------------------------------------------------------------------------------------------------------------------------- STYLE GÉNÉRAUX -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL ABOUT -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.home-about-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +20,12 @@
     flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes sur petits écrans */
 }
 
-.about-content2 {
+.home-about-content {
     width: 50%;
     text-align: left;
 }
 
-.about-content2 h1 {
+.home-about-content h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #d1b798;
@@ -22,7 +33,7 @@
     text-transform: uppercase;
 }
 
-.about-content2 p {
+.home-about-content p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -30,18 +41,19 @@
     font-weight: 400;
 }
 
-.about-image2 {
+.home-about-image {
     width: 50%;
     border-radius: 50%;
 }
 
-.image-circle2 img {
+.home-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Qui suis-je Section */
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES ABOUT -----------------------------------------------------------------------------------------------------------------------------------------*/
+
 .about-section {
     display: flex;
     justify-content: center;
@@ -84,37 +96,29 @@
     object-fit: cover;
 }
 
-/* Footer */
-footer {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.875rem;
-}
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES ABOUT MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* Responsive adjustments for tablet and mobile */
 @media (max-width: 1024px) {
-    .about-section {
+    .home-about-section {
         display: none;
     }
-    .about-section2 {
+    .about-section {
         flex-direction: column; /* Passe les éléments en colonne */
         text-align: center;
         padding: 20px; /* Réduit le padding pour s'adapter aux petits écrans */
         background-color: #111;
     }
 
-    .about-content2, .about-image2 {
+    .about-content, .about-image {
         width: 100%; /* Les éléments occupent 100% de la largeur de l'écran */
         margin-bottom: 20px; /* Ajoute un espace entre le texte et l'image */
     }
 
-    .about-content2 h1 {
+    .about-content h1 {
         font-size: 2.5rem; /* Réduit la taille du titre */
     }
 
-    .about-content2 p {
+    .about-content p {
         font-size: 1.1rem; /* Réduit légèrement la taille du texte */
         color: #fff;
     }
@@ -125,15 +129,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .about-content2 h1 {
+    .about-content h1 {
         font-size: 2rem; /* Taille plus petite pour les téléphones */
     }
 
-    .about-content2 p {
+    .about-content p {
         font-size: 1rem; /* Ajustement du texte pour un écran plus petit */
     }
 
-    .about-section2 {
+    .about-section {
         padding: 10px; /* Réduit le padding sur téléphone */
     }
 }

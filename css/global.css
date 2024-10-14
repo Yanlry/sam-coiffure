@@ -135,9 +135,6 @@ footer {
         font-size: 18px;
     }
 
-    
-    /* Overlay qui couvre tout le contenu pour créer un effet flou */
-/* Overlay qui couvre tout le contenu pour créer un effet flou */
 #overlay {
     position: fixed;
     top: 0;

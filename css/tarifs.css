@@ -1,24 +1,88 @@
-/* Tarifs Section */
-.tarifs {
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.home-price {
+    display: flex;
+    flex-direction: row; /* Les éléments sont alignés en ligne sur grand écran */
+    align-items: center;
+    justify-content: space-between; /* Espace entre l'image et le texte */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Limite la largeur totale de la section */
+}
+
+.home-price-image {
+    flex: 1;
+    max-width: 100%; /* L'image occupe jusqu'à 50% de la largeur */
+    display: flex;
+    justify-content: center; /* Centre horizontalement l'image */
+}
+
+.home-price-image img {
+    width: 100%; /* L'image s'adapte à la largeur de son conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    max-width: 600px; /* Limite la largeur maximale de l'image sur grand écran */
+    object-fit: contain; /* Assure que l'image reste entièrement visible dans son conteneur */
+}
+
+.home-price-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px; /* Ajoute un espace à gauche du texte */
+    text-align: left;
+}
+
+.home-price-text h1 {
+    font-size: clamp(24px, 2vw, 36px); /* Adapte la taille du titre au viewport */
+    margin-bottom: 20px;
+}
+
+.home-price-text button {
+    height: auto;
+    width: auto;
+    padding: 12px 24px;
+    font-size: 1rem; /* Taille fixe pour le bouton */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES TARIFS -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Par défaut, seuls les titres h3 sont visibles */
+.price-item .price,
+.price-item ul {
+    display: none; /* On cache les prix et les détails */
+}
+
+/* Quand on survole un price-item, on affiche les détails */
+.price-item:hover .price,
+.price-item:hover ul {
+    display: block; /* Affiche les prix et les détails au survol */
+}
+
+/* Styles de base */
+.price-section {
     padding: 40px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-.tarifs h1 {
+.price-section h1 {
     font-size: 2.2rem;
     margin-bottom: 80px;
     color: #333;
 }
 
-.tarif-list {
+.price-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
 }
 
-.tarif-item {
+.price-item {
     background-color: #e5d8ca;
     padding: 15px;
     width: 75%;
@@ -28,76 +92,77 @@
     
     /* Ajoute une transition fluide */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indique qu'il est interactif */
 }
 
 /* Agrandissement lors du hover */
-.tarif-item:hover {
-    transform: scale(1.05); /* Agrandit légèrement l'élément tarif */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ajoute une ombre plus prononcée */
+.price-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'élément tarif au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
-.tarif-item h3 {
+.price-item h3 {
     font-size: 1.4rem;
     color: #333;
     margin-bottom: 8px;
 }
 
-.tarif-item .price {
+.price-item .price {
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 8px;
 }
 
-.tarif-item ul {
+.price-item ul {
     list-style: none;
     padding-left: 0;
 }
 
-.tarif-item ul li {
+.price-item ul li {
     margin: 4px 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #f9f8f6;
-}
 
-.hero-image {
-    flex: 1;
-    max-width: 50%;
-}
 
-.hero-image img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.tarif-list {
-    padding-bottom: 200px; /* Ajoute un espace entre le dernier tarif et le footer */
-}
-
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIFS MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Pour les petits écrans (mobile) */
 @media (max-width: 1024px) {
-    .tarifs {
+
+    .home-price {
+        flex-direction: column; /* Empile l'image et le texte en colonne */
+        text-align: center; /* Centre le texte et le bouton */
+    }
+
+    .home-price-text {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .home-price-text button {
+        width: 100%; /* Le bouton prend toute la largeur */
+    }
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES TARIFS MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+    .price-section {
         padding: 40px;
         background-color: #111; /* Fond sombre sur mobile */
         text-align: center;
     }
 
-    .tarifs h1 {
+    .price-section h1 {
         font-size: 2rem;
         color: #d4af37; /* Titre en couleur or sur mobile */
         margin-bottom: 40px;
     }
 
-    .tarif-item {
+    .price-item {
         background-color: #ffffff; /* Fond légèrement plus clair que le fond global */
         padding: 20px;
         width: 90%;
@@ -107,20 +172,20 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .tarif-item h3 {
+    .price-item h3 {
         font-size: 1.5rem;
         color: #d4af37; /* Couleur or pour les titres sur mobile */
         margin-bottom: 10px;
     }
 
-    .tarif-item .price {
+    .price-item .price {
         font-size: 1.8rem;
         font-weight: bold;
         color: #111; /* Texte des prix en blanc pour le contraste */
         margin-bottom: 10px;
     }
 
-    .tarif-item ul li {
+    .price-item ul li {
         color: #111; /* Texte des éléments de liste en gris clair pour contraste */
         margin: 5px 0;
     }

@@ -1,3 +1,5 @@
+/* --------------------------------------------------------------------------------------------------------------------------- STYLE GÉNÉRAUX -----------------------------------------------------------------------------------------------------------------------------------------*/
+
 html {
     height: 100%;
     margin: 0;
@@ -22,141 +24,7 @@ footer {
     padding: 30px 0;
     font-size: 0.875rem;
 }
-
-.services {
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.services h1 {
-    font-size: 3rem;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 100px;
-    color: #333;
-    position: relative;
-}
-
-.services h1::after {
-    content: '';
-    display: block;
-    width: 150px;
-    height: 4px;
-    background-color: #d4af37;
-    margin: 20px auto 0;
-}
-
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    padding: 0 50px;
-}
-
-/* Service Item */
-.service-item {
-    position: relative;
-    width: 100%;
-    max-width: 350px;
-    height: 450px;
-    background: linear-gradient(135deg, #1d1d1d, #434343);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    
-    /* Utilisation de Flexbox pour centrer verticalement et horizontalement */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1; /* Assurez-vous que l'élément est au-dessus */
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-}
-
-.service-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(3px) brightness(0.7);
-    transition: filter 0.3s ease;
-    z-index: -1; /* Place l'image derrière tout */
-}
-
-/* Overlay et texte */
-.service-item h3,
-.service-item p {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-}
-
-.service-item h3 {
-    font-size: 1.8rem;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.service-item p {
-    font-size: 1rem;
-    font-family: 'Lora', serif;
-    line-height: 1.6;
-    padding: 0 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: #fff;
-}
-
-.service-item:hover p {
-    opacity: 1;
-}
-
-.service-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    transition: background-color 0.4s ease;
-    z-index: 1;
-}
-
-.service-item:hover::before {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.service-item button {
-    position: relative;
-    z-index: 2; /* S'assure que le bouton est au-dessus de tout */
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #d4af37;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.service-item button:hover {
-    background-color: #b5952b;
-}
-
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES SERVICES -----------------------------------------------------------------------------------------------------------------------------------------*/
 /* Centrer le titre des services */
 #services-index {
     text-align: center;
@@ -172,7 +40,7 @@ footer {
 }
 
 /* Conteneur des services */
-.service-list-home {
+.service-list {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -181,7 +49,7 @@ footer {
 }
 
 /* Styles par défaut des services */
-.service-item-home {
+.service-item {
     flex: 1;
     background-color: #f9f9f9;
     border-radius: 20px;
@@ -200,7 +68,25 @@ footer {
     height: 250px; /* Assure une hauteur constante pour les services */
 }
 
-.service-item-home h3 {
+/* Cacher le contenu par défaut */
+.service-item p,
+.service-item button {
+    display: none;
+}
+
+/* Afficher le contenu et agrandir l'item au survol */
+.service-item:hover {
+    flex: 2; /* Agrandir l'élément survolé */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover p,
+.service-item:hover button {
+    display: block; /* Afficher le contenu au survol */
+}
+
+/* Styles des titres de services */
+.service-item h3 {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -208,7 +94,8 @@ footer {
     margin-bottom: 20px;
 }
 
-.service-item-home button {
+/* Bouton de services */
+.service-item button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #bbb;
@@ -220,8 +107,12 @@ footer {
     transition: background-color 0.3s ease;
 }
 
+.service-item button:hover {
+    background-color: #d4af37;
+}
+
 /* Centrer aussi le paragraphe */
-.service-item-home p {
+.service-item p {
     margin: 0;
     text-align: center;
     font-size: 1rem;
@@ -229,62 +120,177 @@ footer {
     line-height: 1.5;
 }
 
-.service-item-home button:hover {
-    background-color: #d4af37;
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL SERVICES -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Centrer le titre des services */
+#home-services-index {
+    text-align: center;
+    padding: 50px;
+    background-color: #e2d7ce;
 }
 
-
-/* Lorsque l'élément est actif (cliqué) */
-.service-item-home.active {
-    flex: 2;
+#home-services-index h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #111;
+    letter-spacing: 2px;
 }
 
-.service-item-home.active p {
-    display: block;
+/* Conteneur des services */
+.home-service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+    margin-bottom: 50px;
 }
 
-.service-item-home.active button {
-    background-color: #d4af37;
-}
-
-/* Les services non actifs (rétrécis) */
-.service-item-home:not(.active) {
+/* Styles par défaut des services */
+.home-service-item {
     flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+
+    /* Centrer verticalement et horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Assure une hauteur constante pour les services */
 }
+
+/* Cacher le contenu (paragraphe et bouton) par défaut */
+.home-service-item p,
+.home-service-item button {
+    display: none;
+}
+
+/* Afficher le contenu et agrandir l'item au survol */
+.home-service-item:hover {
+    flex: 2; /* Agrandir l'élément au survol */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.home-service-item:hover p,
+.home-service-item:hover button {
+    display: block; /* Affiche le paragraphe et le bouton au survol */
+}
+
+/* Styles des titres des services */
+.home-service-item h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bouton des services */
+.home-service-item button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #bbb;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-service-item button:hover {
+    background-color: #d4af37;
+}
+
+/* Centrer aussi le paragraphe */
+.home-service-item p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES ACCUEIL SERVICES MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Styles pour mobile */
 @media (max-width: 1024px) {
-    .service-list-home {
+    .home-service-list {
         flex-direction: column;
         gap: 20px;
     }
 
-    .service-item-home {
+    .home-service-item {
         width: 100%; /* Largeur complète pour chaque service */
         transition: all 0.3s ease; /* Ajouter une transition pour l'animation */
         flex: 1; /* Flex par défaut */
     }
 
-    .service-item-home.active {
+    .home-service-item.active {
         flex: 2.5; /* Augmenter la taille pour l'élément actif */
         transition: flex 0.3s ease; /* Animation fluide */
         height: auto; /* S'assurer que la hauteur s'ajuste pour l'actif */
     }
 
-    .service-item-home p {
+    .home-service-item p {
         display: none; /* Par défaut, cacher le texte */
     }
 
-    .service-item-home.active p {
+    .home-service-item.active p {
         display: block; /* Afficher le texte pour l'élément actif */
     }
 
-    .service-item-home.active button {
+    .home-service-item.active button {
         background-color: #d4af37; /* Changement de couleur pour le bouton actif */
     }
 
     /* Réduire la taille des services non actifs */
-    .service-item-home:not(.active) {
+    .home-service-item:not(.active) {
+        flex: 0.8; /* Réduire la taille pour les services non actifs */
+        transition: flex 0.3s ease; /* Animation fluide */
+    }
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES SERVICES MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .service-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-item {
+        width: 100%; /* Largeur complète pour chaque service */
+        transition: all 0.3s ease; /* Ajouter une transition pour l'animation */
+        flex: 1; /* Flex par défaut */
+    }
+
+    .service-item.active {
+        flex: 2.5; /* Augmenter la taille pour l'élément actif */
+        transition: flex 0.3s ease; /* Animation fluide */
+        height: auto; /* S'assurer que la hauteur s'ajuste pour l'actif */
+    }
+
+    .service-item p {
+        display: none; /* Par défaut, cacher le texte */
+    }
+
+    .service-item.active p {
+        display: block; /* Afficher le texte pour l'élément actif */
+    }
+
+    .service-item.active button {
+        background-color: #d4af37; /* Changement de couleur pour le bouton actif */
+    }
+
+    /* Réduire la taille des services non actifs */
+    .service-item:not(.active) {
         flex: 0.8; /* Réduire la taille pour les services non actifs */
         transition: flex 0.3s ease; /* Animation fluide */
     }

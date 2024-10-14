@@ -1,17 +1,19 @@
-.galerie-home {
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL GALERIE -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.home-gallery {
     background-color: #e2d7ce;
     text-align: center;
     overflow-x: hidden; /* Empêche le débordement horizontal */
     padding: 20px;
 }
 
-.galerie-home h2 {
+.home-gallery h2 {
     font-size: 3rem;
     margin-bottom: 100px;
     margin-top: 50px;
     color: #111;
 }
-.gallery-grid-home {
+.home-gallery-grid {
     display: flex; /* Arrange les images en ligne */
     gap: 20px; /* Espace entre les items */
     padding-bottom: 20px;
@@ -19,7 +21,7 @@
     white-space: nowrap; /* Empêche les images de se mettre à la ligne */
 }
 
-.gallery-item-home {
+.home-gallery-item {
     flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
     width: 500px; /* Largeur des images */
     height: 600px; /* Hauteur des images */
@@ -31,28 +33,29 @@
     margin-bottom: 50px;
 }
 
-.gallery-item-home:hover {
+.home-gallery-item:hover {
     transform: scale(1.05);
 }
 
-/* === Styles pour les téléphones mobiles === */
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL GALERIE MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
 
-    /* Section Galerie */
-    .galerie-home {
+    /* Section gallery */
+    .home-gallery {
         background-color: #111;
         text-align: center;
         overflow-x: visible; /* Permet le défilement horizontal */
         padding: 10px;
     }
 
-    .galerie-home h1 {
+    .home-gallery h1 {
         font-size: 1.8rem;
         color: #d1b798;
         margin-bottom: 50px;
     }
 
-    .galerie-home h2 {
+    .home-gallery h2 {
         font-size: 2rem;
         font-weight: bold;
         color: #ffffff;
@@ -60,12 +63,12 @@
         margin-bottom: 40px;
     }
 
-    .galerie-home {
+    .home-gallery {
         padding: 20px 0;
     }
     
 
-    .gallery-item-home {
+    .home-gallery-item {
         flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
         width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
         height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
@@ -75,22 +78,7 @@
     }
     
 
-    .gallery-item-home:hover {
-        transform: scale(1.05);
-    }
-
-    
-    .gallery-item {
-        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
-    }
-    
-
-    .gallery-item:hover {
+    .home-gallery-item:hover {
         transform: scale(1.05);
     }
 }
