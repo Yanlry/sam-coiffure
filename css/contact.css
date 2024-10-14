@@ -8,10 +8,29 @@
 }
 
 .contact h2 {
-    font-size: 2.5rem;
-    color: #111;
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
     margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
 }
+
+/* Effet d'ombre subtile sur le texte */
+.contact h2 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.contact h2:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
+}
+
 
 form {
     display: flex;
@@ -62,13 +81,18 @@ button:hover {
 
     .contact h2 {
         font-size: 2rem;
-        color: #ffffff;
         margin-bottom: 20px;
+        /* Effet dégradé pour ajouter de l'élégance */
+      background: linear-gradient(to right, #d4af37, #f0e68c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     form {
         width: 90%;
         margin: 0 auto;
+        margin-bottom: 50px;
+
     }
 
     label {
@@ -99,5 +123,9 @@ button:hover {
 
     button:hover {
         background-color: #b5952b;
+    }
+
+    footer p {
+        color: #fff;
     }
 }

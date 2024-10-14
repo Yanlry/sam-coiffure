@@ -1,20 +1,43 @@
+/* --------------------------------------------------------------------------------------------------------------------------- STYLES GÉNÉRAUX -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background-color: #fff;
+    color: #111;
+}
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES GALERIE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
-.galerie-desktop {
+.gallery-desktop {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre horizontalement la galerie-desktop */
+    align-items: center; /* Centre horizontalement la gallery-desktop */
     justify-content: center;
     text-align: center;
     background-color: #fff; /* Ajuste la couleur selon ton besoin */
     padding: 20px;
 }
 
-/* Titre de la Galerie-desktop */
-.galerie-desktop h1 {
-    font-size: 2rem;
-    color: #111;
+.gallery-desktop h1 {
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
     margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
+}
+
+/* Effet d'ombre subtile sur le texte */
+.gallery-desktop h1 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.gallery-desktop h1:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
 }
 
 /* Style pour le carrousel */
@@ -22,7 +45,7 @@
     position: relative;
     margin: 0 auto;
     text-align: center;
-    height: 900px;
+    height: 500px;
     width: 900px;
 }
 
@@ -168,34 +191,70 @@
 }
 
 
-/* --------------------------------------------------------------------------------------------------------------------------- PAGES GALERIE MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES gallery MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 1025px) {
-    .galerie {
+    .gallery {
         display: none;
     }}
 /* === Styles pour les téléphones mobiles === */
 @media (max-width: 1024px) {
-    .galerie-desktop {
+    .gallery-desktop {
         display: none;
     }
 
-    /* Section Galerie */
-    .galerie {
+    /* Section gallery */
+    .gallery {
         background-color: #111;
         text-align: center;
         overflow-x: visible; /* Permet le défilement horizontal */
         padding: 10px;
     }
-
-    .galerie h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin-bottom: 40px;
+    .gallery {
+        background-color: #111;
     }
-
+    .gallery h2 {
+        font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
+        font-weight: 700; /* Texte en gras pour un effet plus puissant */
+        color: #333; /* Un gris foncé pour un bon contraste */
+        text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
+        letter-spacing: 3px; /* Espacement entre les lettres pour un look moderne */
+        text-align: center; /* Centre le titre */
+        margin-bottom: 50px;
+        position: relative; /* Permet d'ajouter des éléments décoratifs autour */
+    
+        /* Effet dégradé pour ajouter de l'élégance */
+        background: linear-gradient(to right, #d4af37, #f0e68c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Ajout d'une ligne décorative dorée sous le titre */
+    .gallery h2::after {
+        content: '';
+        display: block;
+        width: 100px; /* Largeur de la ligne */
+        height: 4px; /* Épaisseur de la ligne */
+        background-color: #d4af37; /* Doré pour plus d'élégance */
+        margin: 10px auto; /* Centre la ligne sous le titre */
+        border-radius: 2px; /* Arrondi les bords pour un effet moderne */
+    }
+    
+    /* Animation pour faire apparaître le titre */
+    .gallery h2 {
+        animation: fadeInTitle 1s ease-out;
+    }
+    
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
     .gallery-grid {
         height: 100vh;
         display: flex; /* Arrange les items en ligne */
@@ -219,21 +278,21 @@
         transform: scale(1.05);
     }
 
-     /* Section Galerie-desktop */
-     .galerie-desktop {
+     /* Section gallery-desktop */
+     .gallery-desktop {
         background-color: #111;
         text-align: center;
         overflow-x: visible; /* Permet le défilement horizontal */
         padding: 10px;
     }
 
-    .galerie-desktop h1 {
+    .gallery-desktop h1 {
         font-size: 1.8rem;
         color: #d1b798;
         margin-bottom: 50px;
     }
 
-    .galerie-desktop h2 {
+    .gallery-desktop h2 {
         font-size: 2rem;
         font-weight: bold;
         color: #ffffff;
@@ -241,7 +300,7 @@
         margin-bottom: 40px;
     }
 
-    .galerie-desktop {
+    .gallery-desktop {
         padding: 20px 0;
     }
     

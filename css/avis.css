@@ -1,18 +1,35 @@
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES AVIS -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 .avis {
-    padding: 50px 50px;
     background-color: #ffffff;
     text-align: center;
-    height: 600px; /* Hauteur fixe pour la section noire */
+    padding: 50px;
 }
 
 .avis h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #111;
-    text-transform: uppercase;
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
+    margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
 }
+
+/* Effet d'ombre subtile sur le texte */
+.avis h2 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.avis h2:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
+}
+
 
 .avis p {
     color: #111;
@@ -25,21 +42,11 @@
     overflow: hidden;
 }
 
-/* Limiter la hauteur de la section blockquote pour éviter un débordement */
-.avis-list blockquote {
-    background: #ffffff;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #000;
-}
-
 .rating i {
     color: #FFD700; /* Code couleur pour du doré */
     font-size: 20px; /* Ajuste la taille des étoiles selon tes besoins */
 }
+
 .quote-icon {
     margin-top: 20px;
 }
@@ -52,7 +59,7 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px; /* Réduit la marge autour des boutons */
 }
 
 .prev:hover, .next:hover {

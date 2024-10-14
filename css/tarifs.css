@@ -1,5 +1,12 @@
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
 
+footer {
+    background-color: #fff;
+    color: #111;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
+
 .home-price {
     display: flex;
     flex-direction: row; /* Les éléments sont alignés en ligne sur grand écran */
@@ -29,14 +36,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding-left: 50px; /* Ajoute un espace à gauche du texte */
-    text-align: left;
+    align-items: center; /* Centre le texte horizontalement */
+    padding-left: 50px; /* Optionnel : ajuster ou retirer si nécessaire */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
 }
 
 .home-price-text h1 {
     font-size: clamp(24px, 2vw, 36px); /* Adapte la taille du titre au viewport */
     margin-bottom: 20px;
+    line-height: 1.2; /* Assure un bon espacement entre les lignes */
 }
 
 .home-price-text button {
@@ -65,14 +73,32 @@
 /* Styles de base */
 .price-section {
     padding: 40px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     text-align: center;
 }
 
 .price-section h1 {
-    font-size: 2.2rem;
-    margin-bottom: 80px;
-    color: #333;
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
+    margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
+}
+
+/* Effet d'ombre subtile sur le texte */
+.price-section h1 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.price-section h1:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
 }
 
 .price-list {
@@ -80,10 +106,11 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    padding-bottom: 100px; /* Ajoute un padding supplémentaire en bas */
 }
 
 .price-item {
-    background-color: #e5d8ca;
+    background-color: #fcf2e4;
     padding: 15px;
     width: 75%;
     border-radius: 10px;
@@ -156,10 +183,48 @@
         text-align: center;
     }
 
+
     .price-section h1 {
-        font-size: 2rem;
-        color: #d4af37; /* Titre en couleur or sur mobile */
-        margin-bottom: 40px;
+        font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
+        font-weight: 700; /* Texte en gras pour un effet plus puissant */
+        color: #333; /* Un gris foncé pour un bon contraste */
+        text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
+        letter-spacing: 3px; /* Espacement entre les lettres pour un look moderne */
+        text-align: center; /* Centre le titre */
+        margin-bottom: 50px;
+        position: relative; /* Permet d'ajouter des éléments décoratifs autour */
+    
+        /* Effet dégradé pour ajouter de l'élégance */
+        background: linear-gradient(to right, #d4af37, #f0e68c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Ajout d'une ligne décorative dorée sous le titre */
+    .price-section h1::after {
+        content: '';
+        display: block;
+        width: 100px; /* Largeur de la ligne */
+        height: 4px; /* Épaisseur de la ligne */
+        background-color: #d4af37; /* Doré pour plus d'élégance */
+        margin: 10px auto; /* Centre la ligne sous le titre */
+        border-radius: 2px; /* Arrondi les bords pour un effet moderne */
+    }
+    
+    /* Animation pour faire apparaître le titre */
+    .price-section h1 {
+        animation: fadeInTitle 1s ease-out;
+    }
+    
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .price-item {
@@ -174,7 +239,7 @@
 
     .price-item h3 {
         font-size: 1.5rem;
-        color: #d4af37; /* Couleur or pour les titres sur mobile */
+        color: #111; /* Couleur or pour les titres sur mobile */
         margin-bottom: 10px;
     }
 

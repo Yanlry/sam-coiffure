@@ -80,7 +80,7 @@
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 /* Version desktop visible par défaut */
@@ -130,9 +130,12 @@
     }
 
     .hero-right h1 {
-        font-size: 2rem; /* Ajuste la taille de la police */
+        font-size: 3rem; /* Ajuste la taille de la police */
         margin-bottom: 10px;
-        color: #f5f5f5;
+          /* Effet dégradé pour ajouter de l'élégance */
+          background: linear-gradient(to right, #d4af37, #f0e68c);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
     }
 
     .hero-right {

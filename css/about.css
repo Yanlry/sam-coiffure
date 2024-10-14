@@ -25,13 +25,30 @@ footer {
     text-align: left;
 }
 
-.home-about-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #d1b798;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.home-about-content h2 {
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
+    margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
 }
+
+/* Effet d'ombre subtile sur le texte */
+.home-about-content h2 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.home-about-content h2:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
+}
+
 
 .home-about-content p {
     font-size: 1.2rem;
@@ -70,11 +87,27 @@ footer {
 }
 
 .about-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #d1b798;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    font-size: 3rem; /* Légèrement plus grand pour mieux capter l'attention */
+    margin-bottom: 40px;
+    color: #333; /* Une couleur plus sombre pour plus de contraste */
+    letter-spacing: 4px; /* Un espacement des lettres plus large pour un effet d'élégance */
+    text-transform: uppercase; /* Met le texte en majuscules pour plus d'impact */
+    font-weight: 700; /* Texte en gras pour un effet plus puissant */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #d4af37; /* Ajoute une bordure dorée en dessous */
+}
+
+/* Effet d'ombre subtile sur le texte */
+.about-content h1 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition au survol */
+.about-content h1:hover {
+    color: #d4af37; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur */
 }
 
 .about-content p {
@@ -102,11 +135,55 @@ footer {
     .home-about-section {
         display: none;
     }
+
     .about-section {
         flex-direction: column; /* Passe les éléments en colonne */
         text-align: center;
         padding: 20px; /* Réduit le padding pour s'adapter aux petits écrans */
         background-color: #111;
+    }
+
+    .about-section h2 {
+        font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
+        font-weight: 700; /* Texte en gras pour un effet plus puissant */
+        color: #333; /* Un gris foncé pour un bon contraste */
+        text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
+        letter-spacing: 3px; /* Espacement entre les lettres pour un look moderne */
+        text-align: center; /* Centre le titre */
+        margin-bottom: 50px;
+        position: relative; /* Permet d'ajouter des éléments décoratifs autour */
+    
+        /* Effet dégradé pour ajouter de l'élégance */
+        background: linear-gradient(to right, #d4af37, #f0e68c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Ajout d'une ligne décorative dorée sous le titre */
+    .about-section h2::after {
+        content: '';
+        display: block;
+        width: 100px; /* Largeur de la ligne */
+        height: 4px; /* Épaisseur de la ligne */
+        background-color: #d4af37; /* Doré pour plus d'élégance */
+        margin: 10px auto; /* Centre la ligne sous le titre */
+        border-radius: 2px; /* Arrondi les bords pour un effet moderne */
+    }
+    
+    /* Animation pour faire apparaître le titre */
+    .about-section h2 {
+        animation: fadeInTitle 1s ease-out;
+    }
+    
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .about-content, .about-image {
