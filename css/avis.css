@@ -132,7 +132,7 @@
     }
 
     .slider-controls button {
-        background-color: #111;
+        background: linear-gradient(to right, #d4af37, #f0e68c);
         }
 
 }

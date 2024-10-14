@@ -151,7 +151,7 @@
     .hero-right button {
         margin-top: 0px; /* Réduisez cette valeur pour rapprocher le bouton du contenu au-dessus */
         padding: 10px 20px;
-        background-color: #f5f5f5;
+        background: linear-gradient(to right, #d4af37, #f0e68c);
         color: #111;
         border: none;
         border-radius: 5px;
