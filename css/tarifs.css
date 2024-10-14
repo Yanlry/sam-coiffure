@@ -1,5 +1,16 @@
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES D'ACCUEIL TARIF -----------------------------------------------------------------------------------------------------------------------------------------*/
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Évite le défilement horizontal si présent */
+}
 
+body {
+    position: relative;
+    min-height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+    margin: 0;
+}
 footer {
     position: absolute;
     bottom: 0;
