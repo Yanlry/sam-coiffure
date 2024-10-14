@@ -1,15 +1,32 @@
 /* --------------------------------------------------------------------------------------------------------------------------- STYLE GÉNÉRAUX -----------------------------------------------------------------------------------------------------------------------------------------*/
 
+   /* Global Styles */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Assure que le contenu occupe tout l'espace disponible */
+main {
+    flex-grow: 1; /* Permet à main de prendre tout l'espace restant */
+}
+
+/* Footer fixe en bas */
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #111;
     text-align: center;
-    padding: 30px 0;
-    font-size: 0.875rem;
+    padding: 20px 0;
+    width: 100%;
+    position: relative; /* Le footer reste en position relative */
 }
 
 
@@ -135,93 +152,62 @@ footer {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- PAGES ABOUT MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
-
-@media (max-width: 1024px) {
-    .home-about-section {
+@media (min-width: 1025px) {
+    .about-image-mobile {
         display: none;
-    }
+    }}
 
-    .about-section {
-        flex-direction: column; /* Passe les éléments en colonne */
-        text-align: center;
-        padding: 20px; /* Réduit le padding pour s'adapter aux petits écrans */
-        background-color: #111;
-    }
-
-    .about-section h1 {
-        font-size: 2.5rem; /* Augmente la taille du titre pour plus de présence */
-        font-weight: 700; /* Texte en gras pour un effet plus puissant */
-        color: #333; /* Un gris foncé pour un bon contraste */
-        text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
-        letter-spacing: 3px; /* Espacement entre les lettres pour un look moderne */
-        text-align: center; /* Centre le titre */
-        margin-bottom: 30px;
-        position: relative; /* Permet d'ajouter des éléments décoratifs autour */
-    
-        /* Effet dégradé pour ajouter de l'élégance */
-        background: linear-gradient(to right, #d4af37, #f0e68c);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-  
-    /* Animation pour faire apparaître le titre */
-    .about-section h1 {
-        animation: fadeInTitle 1s ease-out;
-    }
-    
-    @keyframes fadeInTitle {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
+    @media (max-width: 1024px) {
+        .home-about-section, .about-image {
+            display: none;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+    
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrer horizontalement */
+            justify-content: center; /* Centrer verticalement */
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+        }
+    
+        .about-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0px;
+            background: linear-gradient(to right, #d4af37, #f0e68c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+    
+        .about-image-mobile {
+            margin-bottom: 20px; /* Espacement entre l'image et le texte */
+        }
+    
+        .about-content, .about-image {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .about-content h1 {
+            font-size: 1.5rem;
+        }
+    
+        .about-content p {
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: left;
+        }
+    
+        footer {
+            background-color: #111;
+            color: #fff;
         }
     }
-
-    .about-content, .about-image {
-        width: 100%; /* Les éléments occupent 100% de la largeur de l'écran */
-        margin-bottom: 20px; /* Ajoute un espace entre le texte et l'image */
-    }
-
-    .about-content h1 {
-        font-size: 2.5rem; /* Réduit la taille du titre */
-    }
-
-    .about-content p {
-        font-size: 1.1rem; /* Réduit légèrement la taille du texte */
-        color: #fff;
-    }
-
-   /* Global Styles */
-html {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Assure que le contenu occupe tout l'espace disponible */
-main {
-    flex-grow: 1; /* Permet à main de prendre tout l'espace restant */
-}
-
-/* Footer fixe en bas */
-footer {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: relative; /* Le footer reste en position relative */
-}
-}
-
+    
