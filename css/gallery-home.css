@@ -60,48 +60,47 @@
 
 @media (max-width: 768px) {
 
-    /* Section gallery */
-    .home-gallery {
-        background-color: #111;
-        text-align: center;
-        overflow-x: visible; /* Permet le défilement horizontal */
-        padding: 10px;
-    }
+  /* Section gallery */
+.home-gallery {
+    background-color: #111;
+    text-align: center;
+    padding: 10px;
+    overflow-x: auto; /* Active le défilement horizontal */
+    white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+}
 
-    .home-gallery h1 {
-        font-size: 1.8rem;
-        color: #d1b798;
-        margin-bottom: 50px;
-    }
+.home-gallery-grid {
+    display: flex; /* Flexbox pour aligner les items en ligne */
+    flex-wrap: nowrap; /* Assure que tous les éléments restent sur une seule ligne */
+    gap: 10px; /* Espace entre les images */
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding-bottom: 10px; /* Espace sous les images */
+}
 
-    .home-gallery h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        background: linear-gradient(to right, #d4af37, #f0e68c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.home-gallery-item {
+    flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+    width: 300px; /* Largeur de chaque image */
+    height: 300px; /* Hauteur de chaque image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Coins arrondis */
+}
 
-    .home-gallery {
-        padding: 20px 0;
-    }
-    
+.home-gallery-item:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    transition: transform 0.3s ease;
+}
 
-    .home-gallery-item {
-        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
-    }
-    
+.home-gallery h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #d4af37, #f0e68c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .home-gallery-item:hover {
-        transform: scale(1.05);
-    }
 }
 
 
