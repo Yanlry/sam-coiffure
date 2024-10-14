@@ -414,7 +414,7 @@ footer {
     gap: 20px;
     align-items: center; /* Centre les éléments horizontalement */
     justify-content: center; /* Centre les éléments verticalement */
-    padding: 0 20px; /* Ajoute du padding pour éviter que les services touchent les bords */
+    padding: 20px 20px; /* Ajoute du padding pour éviter que les services touchent les bords */
 }
 
 .service-item {

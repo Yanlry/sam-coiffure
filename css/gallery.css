@@ -199,7 +199,7 @@ footer {
 }
 
 
-/* --------------------------------------------------------------------------------------------------------------------------- PAGES gallery MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------------------------- PAGES GALERIE MOBILE -----------------------------------------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 1025px) {
     .gallery {
@@ -221,31 +221,60 @@ footer {
     .gallery {
         background-color: #111;
     }
+    /* Section gallery */
+    .gallery {
+        background-color: #111;
+        text-align: center;
+        overflow-x: auto; /* Permet le défilement horizontal */
+        overflow-y: hidden; /* Empêche le défilement vertical */
+        padding: 10px;
+        white-space: nowrap; /* Assure que les éléments ne se passent pas à la ligne */
+    }
+
     .gallery h2 {
-        font-size: 1.5rem; /* Augmente la taille du titre pour plus de présence */
-        font-weight: 700; /* Texte en gras pour un effet plus puissant */
-        color: #333; /* Un gris foncé pour un bon contraste */
-        text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
-        letter-spacing: 3px; /* Espacement entre les lettres pour un look moderne */
-        text-align: center; /* Centre le titre */
-        margin-bottom: 50px;
-        position: relative; /* Permet d'ajouter des éléments décoratifs autour */
-    
-        /* Effet dégradé pour ajouter de l'élégance */
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 20px;
         background: linear-gradient(to right, #d4af37, #f0e68c);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
-    /* Ajout d'une ligne décorative dorée sous le titre */
+
     .gallery h2::after {
         content: '';
         display: block;
-        width: 100px; /* Largeur de la ligne */
-        height: 4px; /* Épaisseur de la ligne */
-        background-color: #d4af37; /* Doré pour plus d'élégance */
-        margin: 10px auto; /* Centre la ligne sous le titre */
-        border-radius: 2px; /* Arrondi les bords pour un effet moderne */
+        width: 100px;
+        height: 4px;
+        background-color: #d4af37;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
+
+    .gallery-grid {
+        display: flex; /* Arrange les items en ligne */
+        gap: 20px; /* Espace entre les items */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        overflow-y: hidden; /* Empêche le défilement vertical */
+        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+        padding-bottom: 40px;
+    }
+
+    .gallery-item-home {
+        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
+        width: 300px; /* Taille de chaque image, à ajuster selon vos préférences */
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+    }
+
+    .gallery-item-home:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
     
     /* Animation pour faire apparaître le titre */
@@ -263,28 +292,7 @@ footer {
             transform: translateY(0);
         }
     }
-    .gallery-grid {
-        height: 100vh;
-        display: flex; /* Arrange les items en ligne */
-        gap: 20px; /* Espace entre les items */
-        overflow-x: auto; /* Permet le défilement horizontal */
-        white-space: nowrap; /* Empêche les éléments de passer à la ligne */
-        padding-bottom: 40px;
-    }
     
-    .gallery-item-home {
-        flex: 0 0 auto; /* Garde la taille fixe des items et empêche de se redimensionner */
-        width: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        height: 300px; /* Taille de chaque image, à ajuster selon tes préférences */
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px; /* Optionnel, donne des coins arrondis aux images */
-    }
-    
-
-    .gallery-item-home:hover {
-        transform: scale(1.05);
-    }
 
      /* Section gallery-desktop */
      .gallery-desktop {
@@ -344,6 +352,9 @@ footer {
         transform: scale(1.05);
     }
 
+    .body {
+        background-color: #111;
+    }
     footer {
         background-color: #111;
         color: #fff;
